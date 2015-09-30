@@ -1,0 +1,417 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>第 2 页 | 听雪楼主</title>
+  <meta name="author" content="zdc">
+  
+  <meta name="description" content="love life love live">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:site_name" content="听雪楼主"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="听雪楼主" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">听雪楼主</a></h1>
+  <h2><a href="/">love life love live</a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper">
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2013-01-26T03:58:46.000Z"><a href="/2013/01/26/svpwm-sector-and-abc-switching/">2013-01-26</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2013/01/26/svpwm-sector-and-abc-switching/">SVPWM扇区计算，abc开关顺序</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p><img src="http://pic.yupoo.com/zdc1122/DfhAFDBA/medish.jpg" alt=""><br>其中<br>　　　　<img src="http://pic.yupoo.com/zdc1122/DfhAFH55/medish.jpg" alt=""><br>令<br>　　　　<img src="http://pic.yupoo.com/zdc1122/DfhAFkh2/medish.jpg" alt=""><br>求N值<br>　　　　<img src="http://pic.yupoo.com/zdc1122/DfhAGiAE/medish.jpg" alt=""></p>
+<p>N=4<em>C+2</em>B+A</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2012-11-06T10:33:12.000Z"><a href="/2012/11/06/c-pretreatment-questions/">2012-11-06</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2012/11/06/c-pretreatment-questions/">C语言预处理命令常见问题</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>一、宏定义#define</p>
+<p>宏定义就是用一个字符来表示一个字符串，让程序更简明，同时也便于修改,如#define PI 3.1415926 这样的都很常见，也不会产生什么问题，容易出现问题的就是带参数的宏定义，例如</p>
+<p>#define S（x） x*x</p>
+<p>如果x=10，很明显S(10)=10<em>10；但是如果说x=a+b，此时S(x)=a+b</em>a+b，显然和我们预想的不一样，如果这样定义，则可以达到目的</p>
+<p>#define S(x) (x)*(x)</p>
+<p>当x=a+b时，则S(x)=(a+b)*(a+b)，这样就和预想的一样了。<br>
+      
+    </div>
+    <footer>
+      
+        
+          <div class="alignleft">
+            <a href="/2012/11/06/c-pretreatment-questions/#more" class="more-link">Read More</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2012-09-23T11:11:00.000Z"><a href="/2012/09/23/signaltap-ues-1/">2012-09-23</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2012/09/23/signaltap-ues-1/">SignalTap使用（1）</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>在quartus II中，我们可以使用其软件内部再带的SignalTap II Logic Analyzer，观测器实时信号波形，下面就来说如何使用。</p>
+<p>1、将程序编译之后，在菜单栏上点击“Tools”，选择“SignalTap II Logic Analyzer”然后就出现一个新窗口。</p>
+<p>2、在弹出的新窗口中，点击Steup（在中级白色区域下面），在Steup区域中，双击，然后出现个“Node Finder”的窗口，在Filter中，可以选择需要什么类的信号，在Look in中，可以选择想要观测的模块的内部信号。然后点击List，会在Nodes Found中列出各种型号管脚或者寄存器，对于我们需要观测的，双击，则会在右边Selected Nodes里面列出，选择完之后，点击OK即可。</p>
+<p>3、这时在Steup区域，列出我们需要观测的信号，开始设置触发条件。在“Trigger Conditions”下面选择“Basic”，然后在触发信号后面设置触发条件，不需要触发的，可以将“Trigger Enable”方框中勾去掉即可。</p>
+<p>4、设置完之后，在右边的Signal Configuration中，选择Clock，其频率要高于观测信号频率的2倍，在sample depth中选择深度，在Type中选择Continuous即可。</p>
+<iframe height="192" src="https://skydrive.live.com/embed?cid=991352ACD9F1F1CE&amp;resid=991352ACD9F1F1CE%21145&amp;authkey=AGNnDmMYPTouAFs" frameborder="0" width="319" scrolling="no"></iframe>
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2012-09-12T10:19:00.000Z"><a href="/2012/09/12/usb-blaster-driver-install/">2012-09-12</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2012/09/12/usb-blaster-driver-install/">USB blaster驱动安装</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>装驱动就很简单了， Quartus II 的文件夹已经带了驱动程序。当你把下载线一头插到电脑的USB口，弹出硬件安装向导，你给指下路径就可以了。例如我这的路径是D:\altera\91sp2\quartus\drivers\usb-blaster</p>
+<p>然后点击工具栏上的Programmer，在出来界面中，点击Hardware Steup，选择USB blaster，点击Close。然后点击Auto Detect，这时会在右边方框中显示出相应的器件和配置芯片，此时表示驱动安装成功。</p>
+<p>在Hardware Steup，找不到USB blaster，点击Add Hardware，<br>提示“Attempted to access JTAG server – internal error code 82 occurred”，<br>一般和防火墙和杀毒软件有关，如果关掉防火墙和杀毒软件还是不行，就把杀毒软件卸载掉，我是这么解决的。</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2012-09-09T15:32:00.000Z"><a href="/2012/09/09/jtag-and-as-config-mode/">2012-09-09</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2012/09/09/jtag-and-as-config-mode/">JTAG和AS配置模式</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>本文档以Cyclone IV系列芯片作为说明，具体电路查看相关芯片的手册即可。其它芯片看具体情况。</p>
+<p>&nbsp;</p>
+<p><strong>JTAG配置模式：</strong>该模式是将程序直接下载到FPGA中，但是当FPGA断电之后，程序也丢失。将程序compilation之后，选择工具栏上的Programmer，然后出现一个界面，点击Hardware Steup，选择USB blaster，然后点击Close。在Mode中选择JTAG，然后点击左边的Add file，选择.sof文件，然后选中Program/Configure下的方框，再点击Start，在Progress中显示进度，当显示successful时，表示下载成功。此时FPGA不能断电，断电之后需重新下载。</p>
+<p><strong>
+      
+    </div>
+    <footer>
+      
+        
+          <div class="alignleft">
+            <a href="/2012/09/09/jtag-and-as-config-mode/#more" class="more-link">Read More</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2012-09-08T11:21:00.000Z"><a href="/2012/09/08/Using-quartus-ii-create-a-project/">2012-09-08</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2012/09/08/Using-quartus-ii-create-a-project/">使用quartus II创建一个工程</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>环境：quartus II版本: 12.0sp1</p>
+<p>1、打开quartus II软件，如图1所示（软件设置默认）。创建新的工程，选择Create a New Project；如果打开已有的项目，选择Open Existing Project；如果打开最近使用的项目，直接选择Open Recent Project下面显示的即可。当然，这些操作也可以在打开界面，选择“File”，下拉选项里面选择。</p>
+<iframe src="https://skydrive.live.com/embed?cid=991352ACD9F1F1CE&amp;resid=991352ACD9F1F1CE%21136&amp;authkey=AAk1e0Vf63ru0MQ" frameborder="0" scrolling="no" width="319" height="237"></iframe><br><div id="extendedEntryBreak"></div><br>
+      
+    </div>
+    <footer>
+      
+        
+          <div class="alignleft">
+            <a href="/2012/09/08/Using-quartus-ii-create-a-project/#more" class="more-link">Read More</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2012-02-20T03:17:26.000Z"><a href="/2012/02/20/win7-wifi-function-established/">2012-02-20</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2012/02/20/win7-wifi-function-established/">Win7建立wifi功能</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>想好好利用下手机的wifi功能，手机连接电脑上网吗？</p>
+<p>手机wifi是不是搜索不到笔记本建立的临时网络？</p>
+<p>有两台电脑都想上网，只有一个宽带，没有路由器，怎么办？</p>
+<p>现在就告诉大家一个简单有效的方法，在笔记本上建立一个wifi热点，供wifi手机或者其他笔记本链接</p>
+<p>综述：其实就是三段代码:（括号内部分）</p>
+<p>1.（netsh wlan set hostednetwork mode=allow ）</p>
+<p>2.（netsh wlan set hostednetwork ssid=mywifi key=12345678 ）3.(netsh wlan start hostednetwork)</p>
+<p>解释下，很简单，第一个就是设置网络承载模式为允许，第一个设置您建立的wifi用户名及密码，ssid=后面就是用户名，key=后面是密码，自己设定，第三个就开启了。</p>
+      
+    </div>
+    <footer>
+      
+        
+          <div class="alignleft">
+            <a href="/2012/02/20/win7-wifi-function-established/#more" class="more-link">Read More</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+
+<nav id="pagination">
+  
+    <a href="/" class="alignleft prev">上一页</a>
+  
+  
+  <div class="clearfix"></div>
+</nav></div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="搜索">
+    <input type="hidden" name="q" value="site:yoursite.com">
+  </form>
+</div>
+
+  
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/个人随笔/">个人随笔</a><small>1</small></li>
+  
+    <li><a href="/categories/常用算法/">常用算法</a><small>2</small></li>
+  
+    <li><a href="/categories/开发平台/">开发平台</a><small>4</small></li>
+  
+    <li><a href="/categories/电脑软件/">电脑软件</a><small>3</small></li>
+  
+    <li><a href="/categories/硬件设计/">硬件设计</a><small>3</small></li>
+  
+    <li><a href="/categories/编程语言/">编程语言</a><small>4</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">标签</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/20岁-10年/">20岁 10年</a><small>1</small></li>
+  
+    <li><a href="/tags/E-96-电阻/">E-96 电阻</a><small>1</small></li>
+  
+    <li><a href="/tags/JTAG-AS/">JTAG AS</a><small>1</small></li>
+  
+    <li><a href="/tags/Matlab-S-Z-双线性/">Matlab S Z 双线性</a><small>1</small></li>
+  
+    <li><a href="/tags/PCB/">PCB</a><small>1</small></li>
+  
+    <li><a href="/tags/SVPWM/">SVPWM</a><small>1</small></li>
+  
+    <li><a href="/tags/TTL-CMOS/">TTL CMOS</a><small>1</small></li>
+  
+    <li><a href="/tags/U盘-硬盘-win7-USB/">U盘 硬盘 win7 USB</a><small>1</small></li>
+  
+    <li><a href="/tags/c-extern/">c extern</a><small>1</small></li>
+  
+    <li><a href="/tags/define-ifdef-ifndef/">define ifdef ifndef</a><small>1</small></li>
+  
+    <li><a href="/tags/quartus-FPGA-创建/">quartus FPGA 创建</a><small>1</small></li>
+  
+    <li><a href="/tags/static-c/">static c</a><small>1</small></li>
+  
+    <li><a href="/tags/usb-blaster-jtag-internal/">usb blaster jtag internal</a><small>1</small></li>
+  
+    <li><a href="/tags/win7-wifi/">win7 wifi</a><small>1</small></li>
+  
+    <li><a href="/tags/word/">word</a><small>1</small></li>
+  
+    <li><a href="/tags/奇分频-FPGA/">奇分频 FPGA</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2015 zdc
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+</body>
+</html>
