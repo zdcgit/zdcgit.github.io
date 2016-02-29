@@ -346,30 +346,11 @@
     </header>
     <div class="entry">
       
-        <p>在一个project中，会有多个源文件，就会存在一个文件调用另外一个文件中的变量或者函数，下面以自己在实际过程中所用到的加以说明。</p>
-<p><strong>1、引用外部全局变量(无”.h”文件)</strong></p>
-<p>如有stu.c和main.c两个源文件，现在要在main.c文件中使用stu.c中一个全局变量”num”，</p>
-<pre><code><span class="comment">//stu.c</span>
-<span class="preprocessor">#<span class="keyword">include</span> <span class="string">"stdio.h"</span>  </span>
-<span class="keyword">int</span> num = <span class="number">2</span>; <span class="comment">//extern可以省略  </span>
-
-<span class="comment">//main.c</span>
-<span class="preprocessor">#<span class="keyword">include</span> <span class="string">"stdio.h"</span></span>
-<span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span>
-</span>{
-     <span class="keyword">extern</span> <span class="keyword">int</span> num; <span class="comment">//声明要使用的外部变量，前面一定要加上extern</span>
-     <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,num);
-     <span class="keyword">return</span> <span class="number">0</span>;
-}
-</code></pre><p>程序运行结果为：2<br>
+        
       
     </div>
     <footer>
       
-        
-          <div class="alignleft">
-            <a href="/2013/04/09/c-keyword-3-volatile/#more" class="more-link">Read More</a>
-          </div>
         
         
       
@@ -486,7 +467,9 @@
   
     <li><a href="/tags/U盘-硬盘-win7-USB/">U盘 硬盘 win7 USB</a><small>1</small></li>
   
-    <li><a href="/tags/c-extern/">c extern</a><small>2</small></li>
+    <li><a href="/tags/c-extern/">c extern</a><small>1</small></li>
+  
+    <li><a href="/tags/c-volatile/">c volatile</a><small>1</small></li>
   
     <li><a href="/tags/define-ifdef-ifndef/">define ifdef ifndef</a><small>1</small></li>
   
@@ -510,7 +493,7 @@
   </div>
   <footer id="footer" class="inner"><div class="alignleft">
   
-  &copy; 2015 zdc
+  &copy; 2016 zdc
   
 </div>
 <div class="clearfix"></div></footer>

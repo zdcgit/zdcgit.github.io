@@ -62,44 +62,7 @@
     </header>
     <div class="entry">
       
-        <p>在一个project中，会有多个源文件，就会存在一个文件调用另外一个文件中的变量或者函数，下面以自己在实际过程中所用到的加以说明。</p>
-<p><strong>1、引用外部全局变量(无”.h”文件)</strong></p>
-<p>如有stu.c和main.c两个源文件，现在要在main.c文件中使用stu.c中一个全局变量”num”，</p>
-<pre><code><span class="comment">//stu.c</span>
-<span class="preprocessor">#<span class="keyword">include</span> <span class="string">"stdio.h"</span>  </span>
-<span class="keyword">int</span> num = <span class="number">2</span>; <span class="comment">//extern可以省略  </span>
-
-<span class="comment">//main.c</span>
-<span class="preprocessor">#<span class="keyword">include</span> <span class="string">"stdio.h"</span></span>
-<span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span>
-</span>{
-     <span class="keyword">extern</span> <span class="keyword">int</span> num; <span class="comment">//声明要使用的外部变量，前面一定要加上extern</span>
-     <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,num);
-     <span class="keyword">return</span> <span class="number">0</span>;
-}
-</code></pre><p>程序运行结果为：2<br><a id="more"></a></p>
-<p><em>当一个文件要定义或使用外部文件中的变量时，需要在定义或使用前用extern关键字声明其为外部变量。</em></p>
-<p><strong>2、引用外部全局变量(使用“.h”文件)</strong></p>
-<p>一般情况下，模块化程序文件，提供一个.c文件和对应的一个.h文件，如stu.c和stu.h<br>在stu.h文件中声明变量num</p>
-<pre><code><span class="comment">//stu.h</span>
-<span class="built_in">int</span> <span class="built_in">num</span>;
-</code></pre><p>在stu.c文件中赋值，同时包含stu.h</p>
-<pre><code><span class="comment">//stu.c</span>
-<span class="preprocessor">#<span class="keyword">include</span> <span class="string">"stdio.h"</span></span>
-<span class="preprocessor">#<span class="keyword">include</span><span class="string">"stu.h"</span>  //包含stu.h</span>
-num = <span class="number">2</span>;  
-</code></pre><p>现在要在main.c文件中使用num的值，则只需在其头文件中包含stu.h</p>
-<pre><code><span class="comment">//main.c  </span>
-<span class="preprocessor">#<span class="keyword">include</span> <span class="string">"stdio.h"</span>  </span>
-<span class="preprocessor">#<span class="keyword">include</span> <span class="string">"stu.h"</span> //包含stu.h  </span>
-<span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span>  
-</span>{  
-      <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,num);  
-      <span class="keyword">return</span> <span class="number">0</span>;  
-}  
-</code></pre><p>程序运行结果为：2<br>该方法只需增加一个.h文件，在该文件中声明所要使用的变量，然后在.c文件中的头文件中包含即可，不需要在使用前加以特别声明。<em>  <p>以上两种方法都可以在一个文件中使用外部变量，该方法同样适用于结构体和函数。  </p><p></p></em>一般情况下，在实际工程中使用第二种方法，尤其对于结构体和函数。如在stu.h文件中声明，在stu.c文件中定义，如果main.c文件需要使用，只需在其头文件中包含对应的stu.h文件即可。_</p>
-<p><u><strong>以上对于VC环境验证无误，但是在CCS3.3中，存在部分不同点，具体有待验证。</strong></u></p>
-
+        
       
     </div>
     <footer>
@@ -113,7 +76,7 @@ num = <span class="number">2</span>;
         
   
   <div class="tags">
-    <a href="/tags/c-extern/">c extern</a>
+    <a href="/tags/c-volatile/">c volatile</a>
   </div>
 
         
@@ -208,7 +171,9 @@ num = <span class="number">2</span>;
   
     <li><a href="/tags/U盘-硬盘-win7-USB/">U盘 硬盘 win7 USB</a><small>1</small></li>
   
-    <li><a href="/tags/c-extern/">c extern</a><small>2</small></li>
+    <li><a href="/tags/c-extern/">c extern</a><small>1</small></li>
+  
+    <li><a href="/tags/c-volatile/">c volatile</a><small>1</small></li>
   
     <li><a href="/tags/define-ifdef-ifndef/">define ifdef ifndef</a><small>1</small></li>
   
@@ -232,7 +197,7 @@ num = <span class="number">2</span>;
   </div>
   <footer id="footer" class="inner"><div class="alignleft">
   
-  &copy; 2015 zdc
+  &copy; 2016 zdc
   
 </div>
 <div class="clearfix"></div></footer>
