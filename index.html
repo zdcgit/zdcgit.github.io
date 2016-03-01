@@ -63,28 +63,15 @@
     </header>
     <div class="entry">
       
-        <p>在C语言中，调用函数需要开销内存和花费时间，有时候需要的函数很简单，比如要实现两个数的比较，取较大的一个，有几种方式：<br>宏定义方式：<br><code>#define max(a,b) ((a&gt;b)?a:b)</code><br>函数方式:    </p>
-<pre><code><span class="function"><span class="keyword">int</span> <span class="title">max</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span>{  
-    <span class="keyword">return</span> ((a&gt;b)?a:b);   
-}   
-</code></pre><p>在编译时，宏定义方式会在调用处直接展开，而函数方式会生成独立代码。可以看出宏定义是以空间换时间，但是宏定义有自身的限制，在使用时有时候存在不便，比如调试等，有没有类似宏定义这样的函数呢？有的！这就是inline函数。<br>inline函数就是在函数定义前加上inline关键字，如：  </p>
-<pre><code><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">max</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span>{
-    <span class="keyword">return</span> ((a&gt;b)?a:b);
-}   
-</code></pre><p>这样在使用max函数地方，直接以代码方式展开，不需要函数调用的开销。   </p>
-<p><strong>inline函数使用注意问题：</strong>  </p>
-<ul>
-<li>1.inline函数关键字在函数定义前加才有效，在函数声明处加无效；  </li>
-<li>2.如果inline函数定义在.c文件内，只能被该.c件内使用，所以一般定义在.h文件中，这样只要引用了该头文件的地方都可以使用；  </li>
-<li>3.inline函数要求简单，不可语句过多，有循环语句等。  </li>
-</ul>
-<p>查了一些资料，关于static inline和inline的区别，有很多种说法，我的看法是，inline是建议内联，static inline是强制内联。<br>inline函数在不同的编译器，处理的结果不同，C99标准和gcc标准也有些区别，具体的可以去查看相关资料。</p>
-<p><em>其实关于inline函数的使用，在c99和gcc的标准中有些区别，还有一些IDE有优化功能，这些可以去查看相关资料，大部分情况下，以上三条就够用了。</em></p>
-
+        <p>在C语言中，调用函数需要开销内存和花费时间，有时候需要的函数很简单，比如要实现两个数的比较，取较大的一个，有几种方式：<br>宏定义方式：<br><code>#define max(a,b) ((a&gt;b)?a:b)</code><br>函数方式:<br>
       
     </div>
     <footer>
       
+        
+          <div class="alignleft">
+            <a href="/2016/02/20/c-keyword-4-inline/#more" class="more-link">Read More</a>
+          </div>
         
         
       

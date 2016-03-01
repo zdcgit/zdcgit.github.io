@@ -62,11 +62,7 @@
     </header>
     <div class="entry">
       
-        <p>在C语言中，调用函数需要开销内存和花费时间，有时候需要的函数很简单，比如要实现两个数的比较，取较大的一个，有几种方式：<br>宏定义方式：<br><code>#define max(a,b) ((a&gt;b)?a:b)</code><br>函数方式:    </p>
-<pre><code><span class="function"><span class="keyword">int</span> <span class="title">max</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span>{  
-    <span class="keyword">return</span> ((a&gt;b)?a:b);   
-}   
-</code></pre><p>在编译时，宏定义方式会在调用处直接展开，而函数方式会生成独立代码。可以看出宏定义是以空间换时间，但是宏定义有自身的限制，在使用时有时候存在不便，比如调试等，有没有类似宏定义这样的函数呢？有的！这就是inline函数。<br>inline函数就是在函数定义前加上inline关键字，如：  </p>
+        <p>在C语言中，调用函数需要开销内存和花费时间，有时候需要的函数很简单，比如要实现两个数的比较，取较大的一个，有几种方式：<br>宏定义方式：<br><code>#define max(a,b) ((a&gt;b)?a:b)</code><br>函数方式:<br><a id="more"></a><br>    int max(int a, int b){<br>        return ((a&gt;b)?a:b);<br>    }<br>在编译时，宏定义方式会在调用处直接展开，而函数方式会生成独立代码。可以看出宏定义是以空间换时间，但是宏定义有自身的限制，在使用时有时候存在不便，比如调试等，有没有类似宏定义这样的函数呢？有的！这就是inline函数。<br>inline函数就是在函数定义前加上inline关键字，如：  </p>
 <pre><code><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">max</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span>{
     <span class="keyword">return</span> ((a&gt;b)?a:b);
 }   
