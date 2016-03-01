@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>quartus FPGA 创建 | 听雪楼主</title>
+  <title>C语言关键字(4)——inline | 听雪楼主</title>
   <meta name="author" content="zdc">
   
   <meta name="description" content="love life love live">
@@ -11,7 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
+  <meta property="og:title" content="C语言关键字(4)——inline"/>
   <meta property="og:site_name" content="听雪楼主"/>
 
   
@@ -46,25 +46,101 @@
 </nav>
 <div class="clearfix"></div></header>
   <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper">
-<h2 class="archive-title tag">quartus FPGA 创建</h2>
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2016-02-20T09:02:35.000Z"><a href="/2016/02/20/c-keyword-4-inline/">2016-02-20</a></time>
+      
+      
+  
+    <h1 class="title">C语言关键字(4)——inline</h1>
+  
 
+    </header>
+    <div class="entry">
+      
+        <p>在C语言中，调用函数需要开销内存和花费时间，有时候需要的函数很简单，比如要实现两个数的比较，取较大的一个，有几种方式：<br>宏定义方式：<br><code>#define max(a,b) ((a&gt;b)?a:b)</code><br>函数方式:    </p>
+<pre><code><span class="function"><span class="keyword">int</span> <span class="title">max</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span>{  
+    <span class="keyword">return</span> ((a&gt;b)?a:b);   
+}   
+</code></pre><p>在编译时，宏定义方式会在调用处直接展开，而函数方式会生成独立代码。可以看出宏定义是以空间换时间，但是宏定义有自身的限制，在使用时有时候存在不便，比如调试等，有没有类似宏定义这样的函数呢？有的！这就是inline函数。<br>inline函数就是在函数定义前加上inline关键字，如：  </p>
+<pre><code><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">max</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span>{
+    <span class="keyword">return</span> ((a&gt;b)?a:b);
+}   
+</code></pre><p>这样在使用max函数地方，直接以代码方式展开，不需要函数调用的开销。   </p>
+<p><strong>inline函数使用注意问题：</strong>  </p>
+<ul>
+<li>1.inline函数关键字在函数定义前加才有效，在函数声明处加无效；  </li>
+<li>2.如果inline函数定义在.c文件内，只能被该.c件内使用，所以一般定义在.h文件中，这样只要引用了该头文件的地方都可以使用；  </li>
+<li>3.inline函数要求简单，不可语句过多，有循环语句等。  </li>
+</ul>
+<p>查了一些资料，关于static inline和inline的区别，有很多种说法，我的看法是，inline是建议内联，static inline是强制内联。<br>inline函数在不同的编译器，处理的结果不同，C99标准和gcc标准也有些区别，具体的可以去查看相关资料。</p>
+<p><em>其实关于inline函数的使用，在c99和gcc的标准中有些区别，还有一些IDE有优化功能，这些可以去查看相关资料，大部分情况下，以上三条就够用了。</em></p>
 
-  <div class="archive">
-    
-      <article class="post">
-        <div class="post-content">
-          <header>
-            <div class="icon"></div>
-            <time datetime="2012-09-08T11:21:00.000Z"><a href="/2012/09/08/Using-quartus-ii-create-a-project/">2012-09-08</a></time>
-            
-              <h1 class="title"><a href="/2012/09/08/Using-quartus-ii-create-a-project/">使用quartus II创建一个工程</a></h1>
-            
-          </header>
-        </div>
-      </article>
-    
+      
+    </div>
+    <footer>
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/软件设计/">软件设计</a>
   </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/static-cinline/">static cinline</a>
+  </div>
+
+        
+  <div class="addthis addthis_toolbox addthis_default_style">
+    
+      <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+    
+    
+      <a class="addthis_button_tweet"></a>
+    
+    
+      <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+    
+    
+      <a class="addthis_button_pinterest_pinit" pi:pinit:layout="horizontal"></a>
+    
+    <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js"></script>
+
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+  <h1 class="title">留言</h1>
+
+  
+      <div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=123456789012345";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<div class="fb-comments" data-href="http://yoursite.com/2016/02/20/c-keyword-4-inline/index.html" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
+      
+  
+</section>
+
 </div></div>
     <aside id="sidebar" class="alignright">
   <div class="search">
