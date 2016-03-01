@@ -118,6 +118,57 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2015-06-01T12:00:27.000Z"><a href="/2015/06/01/6410-Bootloader-SD/">2015-06-01</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2015/06/01/6410-Bootloader-SD/">6410开发记录（1）---第一个程序</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>关于6410的启动以及启动原理，很多地方都有介绍，这里主要介绍的是从SD卡启动，然后通过串口download程序。先下载相应的<a href="http://pan.baidu.com/s/1geulQKj" target="_blank" rel="external">文件和工具</a>。　</p>
+<h2 id="一-SD卡烧录">一.SD卡烧录</h2><p>首先将一段bootloader烧录到SD卡中去，具体步骤如下：  </p>
+<ol>
+<li><ul>
+<li>准备好一张SD卡和读卡器，通过读卡器插入电脑USB端口；  </li>
+</ul>
+</li>
+<li>以管理员身份打开MoviNand.exe，根据SD卡类型在SD Type后选择SD或者SDHC，在SD Volume中选择插入的卡的盘符(如果没有的话，点击后面的Scan);  </li>
+<li>在Bootloader栏中，点击Brows，选择刚刚下载的uart_boot.bin文件，然后点击Program。 </li>
+<li>至此，SD卡烧录成功。 </li>
+</ol>
+<p>如果SD卡烧录失败，检查下是否是以管理员身份启动MoviNand.exe的。　　</p>
+<h2 id="二-下载程序_##">二.下载程序 ##　　</h2><p>1.将烧录好的SD卡插入开发板中，将开发板的串口(Uart0)与PC连接；<br>2.打开UartDownload.exe软件，选择对应的COM口，点击Open打开串口；<br>3.打开开发板的电源，这时候在接收区有显示  </p>
+<pre><code><span class="function_or_atom">uart_boot</span> <span class="function_or_atom">version</span>: <span class="variable">V1</span>.<span class="number">0</span><span class="exclamation_mark">!</span>
+<span class="variable">Please</span> <span class="variable">Download</span> <span class="variable">File</span><span class="exclamation_mark">!</span>
+</code></pre><p>4.此时表示SD卡上的Bootloader加载成功；<br>点击下载栏的Brows，选择uart.bin文件，然后点击Download；<br>5.下载完成之后，在接收区有显示  </p>
+<pre><code><span class="keyword">this</span> <span class="keyword">is</span> uart0 test  
+</code></pre><p>6.至此，整个过程完成，今后写完程序之后，可以使用UartDownload.exe下载程序即可。  </p>
+<p>如果在2.3步失败，按照以下步骤检查：<br>首先检查串口是否OK；<br>如果没有问题，则将SD卡插入电脑，在磁盘管理器中查看SD卡是否存在未分配空间，如果存在未分配空间，则需要将SD卡格式化，格式化之后再次检查是否存在未分配空间，完成之后再从第一步SD卡烧录开始。<br><em>UartDownload.exe软件除了下载、发送单字符串和串口设置外，其它功能暂时不能使用，后面有待完善。</em></p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2013-12-05T12:55:53.000Z"><a href="/2013/12/05/word-help/">2013-12-05</a></time>
       
       
@@ -363,38 +414,6 @@
 
 
 
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2013-04-09T02:21:15.000Z"><a href="/2013/04/09/c-keyword-3-volatile/">2013-04-09</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2013/04/09/c-keyword-3-volatile/">C语言关键字(3)——volatile</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
 
 <nav id="pagination">
   
@@ -416,6 +435,8 @@
   <h3 class="title">分类</h3>
   <ul class="entry">
   
+    <li><a href="/categories/6410学习/">6410学习</a><small>1</small></li>
+  
     <li><a href="/categories/常用算法/">常用算法</a><small>2</small></li>
   
     <li><a href="/categories/开发平台/">开发平台</a><small>4</small></li>
@@ -436,6 +457,8 @@
 <div class="widget tag">
   <h3 class="title">标签</h3>
   <ul class="entry">
+  
+    <li><a href="/tags/6410-SD/">6410 SD</a><small>1</small></li>
   
     <li><a href="/tags/E-96-电阻/">E-96 电阻</a><small>1</small></li>
   

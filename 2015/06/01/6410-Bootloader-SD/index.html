@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>S域到Z域双线性变换 | 听雪楼主</title>
+  <title>6410开发记录（1）---第一个程序 | 听雪楼主</title>
   <meta name="author" content="zdc">
   
   <meta name="description" content="love life love live">
@@ -11,7 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="S域到Z域双线性变换"/>
+  <meta property="og:title" content="6410开发记录（1）---第一个程序"/>
   <meta property="og:site_name" content="听雪楼主"/>
 
   
@@ -52,17 +52,35 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2013-04-26T08:46:50.000Z"><a href="/2013/04/26/s-to-z-bilinear-transformation/">2013-04-26</a></time>
+        <time datetime="2015-06-01T12:00:27.000Z"><a href="/2015/06/01/6410-Bootloader-SD/">2015-06-01</a></time>
       
       
   
-    <h1 class="title">S域到Z域双线性变换</h1>
+    <h1 class="title">6410开发记录（1）---第一个程序</h1>
   
 
     </header>
     <div class="entry">
       
-        <p>在Matlab中，c2d函数可以实现S域到Z域双线性变换，<br>但是如果要在DSP中实现双线性变换，就需要通过一般形式来表达,然后在DSP中去实现，<br>在求Z域的表达式时，对于高阶次的，计算量大，因此本人在Matlab中编写了一个M文件，<br>通过编写的函数，只需输入分子分母的阶次即可计算出相关系数，<br>具体的M文件和使用说明<a href="http://pan.baidu.com/share/link?shareid=391879&amp;uk=456472238" target="_blank" rel="external">点此下载</a></p>
+        <p>关于6410的启动以及启动原理，很多地方都有介绍，这里主要介绍的是从SD卡启动，然后通过串口download程序。先下载相应的<a href="http://pan.baidu.com/s/1geulQKj" target="_blank" rel="external">文件和工具</a>。　</p>
+<h2 id="一-SD卡烧录">一.SD卡烧录</h2><p>首先将一段bootloader烧录到SD卡中去，具体步骤如下：  </p>
+<ol>
+<li><ul>
+<li>准备好一张SD卡和读卡器，通过读卡器插入电脑USB端口；  </li>
+</ul>
+</li>
+<li>以管理员身份打开MoviNand.exe，根据SD卡类型在SD Type后选择SD或者SDHC，在SD Volume中选择插入的卡的盘符(如果没有的话，点击后面的Scan);  </li>
+<li>在Bootloader栏中，点击Brows，选择刚刚下载的uart_boot.bin文件，然后点击Program。 </li>
+<li>至此，SD卡烧录成功。 </li>
+</ol>
+<p>如果SD卡烧录失败，检查下是否是以管理员身份启动MoviNand.exe的。　　</p>
+<h2 id="二-下载程序_##">二.下载程序 ##　　</h2><p>1.将烧录好的SD卡插入开发板中，将开发板的串口(Uart0)与PC连接；<br>2.打开UartDownload.exe软件，选择对应的COM口，点击Open打开串口；<br>3.打开开发板的电源，这时候在接收区有显示  </p>
+<pre><code><span class="function_or_atom">uart_boot</span> <span class="function_or_atom">version</span>: <span class="variable">V1</span>.<span class="number">0</span><span class="exclamation_mark">!</span>
+<span class="variable">Please</span> <span class="variable">Download</span> <span class="variable">File</span><span class="exclamation_mark">!</span>
+</code></pre><p>4.此时表示SD卡上的Bootloader加载成功；<br>点击下载栏的Brows，选择uart.bin文件，然后点击Download；<br>5.下载完成之后，在接收区有显示  </p>
+<pre><code><span class="keyword">this</span> <span class="keyword">is</span> uart0 test  
+</code></pre><p>6.至此，整个过程完成，今后写完程序之后，可以使用UartDownload.exe下载程序即可。  </p>
+<p>如果在2.3步失败，按照以下步骤检查：<br>首先检查串口是否OK；<br>如果没有问题，则将SD卡插入电脑，在磁盘管理器中查看SD卡是否存在未分配空间，如果存在未分配空间，则需要将SD卡格式化，格式化之后再次检查是否存在未分配空间，完成之后再从第一步SD卡烧录开始。<br><em>UartDownload.exe软件除了下载、发送单字符串和串口设置外，其它功能暂时不能使用，后面有待完善。</em></p>
 
       
     </div>
@@ -71,13 +89,13 @@
         
   
   <div class="categories">
-    <a href="/categories/软件设计/">软件设计</a>
+    <a href="/categories/6410学习/">6410学习</a>
   </div>
 
         
   
   <div class="tags">
-    <a href="/tags/Matlab-S-Z-双线性/">Matlab S Z 双线性</a>
+    <a href="/tags/6410-SD/">6410 SD</a>
   </div>
 
         
@@ -120,7 +138,7 @@
   }(document, 'script', 'facebook-jssdk'));
 </script>
 
-<div class="fb-comments" data-href="http://yoursite.com/2013/04/26/s-to-z-bilinear-transformation/index.html" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
+<div class="fb-comments" data-href="http://yoursite.com/2015/06/01/6410-Bootloader-SD/index.html" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
       
   
 </section>
