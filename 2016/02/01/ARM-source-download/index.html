@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>TTL和CMOS区别 | 听雪楼主</title>
+  <title>ARM资源下载 | 听雪楼主</title>
   <meta name="author" content="zdc">
   
   <meta name="description" content="love life love live">
@@ -11,7 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="TTL和CMOS区别"/>
+  <meta property="og:title" content="ARM资源下载"/>
   <meta property="og:site_name" content="听雪楼主"/>
 
   
@@ -52,30 +52,24 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2013-10-12T16:50:08.000Z"><a href="/2013/10/13/ttl-and-cmos-difference/">2013-10-13</a></time>
+        <time datetime="2016-02-01T09:00:27.000Z"><a href="/2016/02/01/ARM-source-download/">2016-02-01</a></time>
       
       
   
-    <h1 class="title">TTL和CMOS区别</h1>
+    <h1 class="title">ARM资源下载</h1>
   
 
     </header>
     <div class="entry">
       
-        <p>#一、定义<br>TTL集成电路的全名是晶体管-晶体管逻辑集成电路（Transistor-Transistor Logic)，主要有54/74系列标准TTL、高速型TTL（HTTL）、低功耗型TTL（LTTL）、肖特基型TTL（S-TTL）、低功耗肖特基型TTL（LSTTL）五个系列。<br>CMOS集成电路全名是互补金属-氧化物-半导体场效应管（Complementary metal-oxide-semiconductor）。<br>TTL电路的电平就叫TTL电平，CMOS电路的电平就叫CMOS电平。</p>
-<a id="more"></a>
-<p>#二、标准电平<br><strong>TTL电平：</strong><br>　　输出：低电平小于0.4V，高电平高于2.4V<br>　　输入：低电平小于0.8V，高电平高于2.0V<br><strong>CMOS电平：</strong><br>　　输出：低电平小于0.1Vcc，高电平高与0.9Vcc<br>　　输入：低电平小于0.3Vcc，高电平高于0.7Vcc </p>
-<p>　　对于5V的TTL电平，在室温情况下，一般输出高电平是3.5V，输出低电平是0.2V；输入高电平高于2.0V，输入点电平小于0.2V；噪声容限是0.4V。<br>CMOS的逻辑高电平电压接近于电源电压，低电平电压接近于0.</p>
-<p>#三、TTL与CMOS电路比较</p>
-<ul>
-<li>TTL集成电路功耗大，驱动能力强，一般提供25mA的驱动电流；CMOS集成电路功耗   低，与输入的信号频率有关，工作电压范围大，一般提供10mA左右驱动电流。  </li>
-<li>TTL是电流控制器件，一般需要2.5mA的输入电流；CMOS是电压控制器件，几乎不需要电流输入。</li>
-<li>TTL电路速度快，传输延时时间短（5-10ns）；CMOS速度慢，传输时间较长（25-50ns）。  </li>
-<li>CMOS锁定效应：CMOS电路由于输入太大的电流，内部电流急剧增加，除非切断电源，否则一直在增加。当产生锁定效应时，内部电流达到40mA以上时，就会烧毁芯片。对此可以采取以下措施：　　　　<br>　　a、在输入端和输出端加钳位电路，使输入和输出不超过规定电压；<br>  　　b、芯片的电源输入端加入去耦电容，防止VDD出现瞬间的高压；<br>  　　c、在VDD与外电源之间加入限流电阻，防止电流过大。  </li>
-<li>当系统又几个电源供电时，电源的开关按照以下顺序：开启顺序，先开启CMOS电路，再开启输入信号和负载电源；关闭顺序正好相反。</li>
-<li>CMOS电路注意事项：<br>  　　a、CMOS电路是电压控制器件，输入阻抗很大，对干扰信号的扑捉能力很强，因此不用的管脚不能悬空，要通过上拉或者下拉给定一个电平；<br>  　　b、输入端接低内阻的信号时，在输入端与信号之间加限流电阻，使输入的电流限制在1mA以内；<br>  　　c、接长信号传输线时，在CMOS电路端接匹配电阻；<br>  　　d、在输入端接大电容时，应该在输入端和电容之间接保护电阻，保护电阻的组值R=Vo/1mA，Vo为外界电容上的电压；<br>  　　e、CMOS输入电流超过1mA时，可能会烧坏CMOS。  </li>
-<li>TTL门电路中输入端负载特性<br>  　　a、悬空时相当于输入端接高电平；<br>  　　b、输入端接的串联电阻小于910欧姆的时候，输入的低电平信号才能被门电路识别，否则输入端门电路一直呈现高电平。</li>
-</ul>
+        <p>该下载区主要是一些关于ARM讲解的资源下载，有我自己写的文档，也有ARM官方的手册。</p>
+<ol>
+<li>S3C6410启动代码中用到的一些汇编指令<a href="http://pan.baidu.com/s/1boqZ0M" target="_blank" rel="external">《ARM常用汇编指令》</a>。</li>
+<li>ARM的工作模式简单介绍<a href="http://pan.baidu.com/s/1mgUtCUG" target="_blank" rel="external">《ARM工作模式》</a>。</li>
+<li>ARM协处理器，主要是CP15的介绍<a href="http://pan.baidu.com/s/1dEp6HSd" target="_blank" rel="external">《ARM协处理器》</a>。</li>
+<li>ARM9技术指导手册<a href="http://pan.baidu.com/s/1skxVOlf" target="_blank" rel="external">《ARM922T》</a>。</li>
+<li>ARM系统开发指导<a href="http://pan.baidu.com/s/1jH39A54" target="_blank" rel="external">《ARM System Developer’s Guide》</a>。</li>
+</ol>
 
       
     </div>
@@ -84,13 +78,13 @@
         
   
   <div class="categories">
-    <a href="/categories/硬件设计/">硬件设计</a>
+    <a href="/categories/资源下载/">资源下载</a>
   </div>
 
         
   
   <div class="tags">
-    <a href="/tags/TTL-CMOS/">TTL CMOS</a>
+    <a href="/tags/arm/">arm</a>
   </div>
 
         
@@ -133,7 +127,7 @@
   }(document, 'script', 'facebook-jssdk'));
 </script>
 
-<div class="fb-comments" data-href="http://yoursite.com/2013/10/13/ttl-and-cmos-difference/index.html" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
+<div class="fb-comments" data-href="http://yoursite.com/2016/02/01/ARM-source-download/index.html" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
       
   
 </section>
