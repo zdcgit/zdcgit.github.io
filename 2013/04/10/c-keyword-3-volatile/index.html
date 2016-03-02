@@ -52,7 +52,7 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2013-04-09T02:21:15.000Z"><a href="/2013/04/09/c-keyword-3-volatile/">2013-04-09</a></time>
+        <time datetime="2013-04-10T02:21:15.000Z"><a href="/2013/04/10/c-keyword-3-volatile/">2013-04-10</a></time>
       
       
   
@@ -62,7 +62,24 @@
     </header>
     <div class="entry">
       
-        
+        <p>volatile的意思是不稳定的，易变的。volatile作为关键字声明变量之后，每次对该变量的访问都会去访问该变量的内存单元，而非寄存器。因为代码经过编译优化之后，在访问一些变量时，直接从寄存器访问。下面看一段示意代码：</p>
+<pre><code>byte flag = <span class="number">0</span>;
+<span class="attribute">...</span>
+<span class="literal">void</span> func(<span class="literal">void</span>){
+    <span class="keyword">if</span>(flag)
+        <span class="keyword">do</span> something<span class="attribute">...</span>
+    <span class="keyword">else</span>
+        <span class="keyword">do</span> something<span class="attribute">...</span>
+}
+</code></pre><p>如果变量flag是在某一中断函数中去改变，会发现在函数func中，一直都是执行else后面的语句。<br>如果修改为</p>
+<pre><code><span class="keyword">volatile</span> <span class="keyword">byte</span> flag = <span class="number">0</span>;
+</code></pre><p>则就达到想要的结果了。<br>一般来说，volatile常用在三个地方：</p>
+<ul>
+<li>在中断服务程序中修改的变量在其它地方作为条件检测来使用； </li>
+<li>多任务或多线程中共享的变量；  </li>
+<li>存储器映射的硬件寄存器。</li>
+</ul>
+
       
     </div>
     <footer>
@@ -119,7 +136,7 @@
   }(document, 'script', 'facebook-jssdk'));
 </script>
 
-<div class="fb-comments" data-href="http://yoursite.com/2013/04/09/c-keyword-3-volatile/index.html" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
+<div class="fb-comments" data-href="http://yoursite.com/2013/04/10/c-keyword-3-volatile/index.html" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
       
   
 </section>
