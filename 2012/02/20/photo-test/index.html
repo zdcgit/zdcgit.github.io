@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>E-96电阻值代码表 | 听雪楼主</title>
+  <title>Win7建立wifi功能 | 听雪楼主</title>
   <meta name="author" content="zdc">
   
   <meta name="description" content="love life love live">
@@ -11,7 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="E-96电阻值代码表"/>
+  <meta property="og:title" content="Win7建立wifi功能"/>
   <meta property="og:site_name" content="听雪楼主"/>
 
   
@@ -52,17 +52,36 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2013-10-22T11:50:44.000Z"><a href="/2013/10/22/E-96-resistance-value/">2013-10-22</a></time>
+        <time datetime="2012-02-20T03:17:26.000Z"><a href="/2012/02/20/photo-test/">2012-02-20</a></time>
       
       
   
-    <h1 class="title">E-96电阻值代码表</h1>
+    <h1 class="title">Win7建立wifi功能</h1>
   
 
     </header>
     <div class="entry">
       
-        <p>在贴片电阻的标注中，会有01C这种的标注方法，该种方法的称作三位数数乘标注法，表示方法为XXY。<br>其中XX可以通过E-96电阻值代码表查出，XXY对应的阻值为XX对应代码值乘以10^Y。<br>如01C，通过查表可知01表示100，C对应10的2次幂，所以01C对应阻值为100×10^2=10K。<br>E-96乘数代码表和阻值代码表如下：<br><img src="http://pic.yupoo.com/zdc1122/DfS5yoke/medish.jpg" alt=""><br>电阻阻值查询软件<a href="http://pan.baidu.com/share/link?shareid=395065974&amp;uk=456472238" target="_blank" rel="external">点此下载</a>。</p>
+        <p>想好好利用下手机的wifi功能，手机连接电脑上网吗？</p>
+<p>手机wifi是不是搜索不到笔记本建立的临时网络？</p>
+<p>有两台电脑都想上网，只有一个宽带，没有路由器，怎么办？</p>
+<p>现在就告诉大家一个简单有效的方法，在笔记本上建立一个wifi热点，供wifi手机或者其他笔记本链接</p>
+<p>综述：其实就是三段代码:（括号内部分）</p>
+<p>1.（netsh wlan set hostednetwork mode=allow ）</p>
+<p>2.（netsh wlan set hostednetwork ssid=mywifi key=12345678 ）3.(netsh wlan start hostednetwork)</p>
+<p>解释下，很简单，第一个就是设置网络承载模式为允许，第一个设置您建立的wifi用户名及密码，ssid=后面就是用户名，key=后面是密码，自己设定，第三个就开启了。</p>
+<a id="more"></a>
+<p><strong>接下来就是具体操作了：</strong></p>
+<p>1.打开WIN7开始菜单，在左下角的框上输入CMD，搜索出来的CMD.EXE对着它右键，选择以“管理员身份运行”。<br>2.依次输入以下代码，红色部分，每输入完一次点击一次回车键</p>
+<p>（1）netsh wlan set hostednetwork mode=allow<br>承载网络模式设置为允许<br>（2）netsh wlan set hostednetwork ssid=mywifi key=123456789 设置一个名字为mywifi的无线接入点，接入点密码为123456789（3）netsh wlan start hostednetwork</p>
+<p>启动承载网络</p>
+<p>如图：</p>
+<p><a href="https://zdc.cn.quickconnect.to/photo/share/UUF7DbsE/photo_77616c6c7061706572_494d475f32303038303932365f3034353931322e6a7067" target="_blank" rel="external">!test</a></p>
+<p>大功告成</p>
+<p>通过手机或者其他笔记本访问这个mywifi链接试试</p>
+<p>当然，是不是觉得每次都要输入代码，很麻烦，没关系，下面是偷懒的办法。前提是您第一次建立成功</p>
+<p>新建一个记事本，把第三段代码复制到记事本里，如图</p>
+<p>现在，你可以连接名称为mywifi密码是123456789的WIFI接入点了</p>
 
       
     </div>
@@ -71,13 +90,13 @@
         
   
   <div class="categories">
-    <a href="/categories/硬件设计/">硬件设计</a>
+    <a href="/categories/电脑软件/">电脑软件</a>
   </div>
 
         
   
   <div class="tags">
-    <a href="/tags/E-96-电阻/">E-96 电阻</a>
+    <a href="/tags/win7-wifi/">win7 wifi</a>
   </div>
 
         
@@ -120,7 +139,7 @@
   }(document, 'script', 'facebook-jssdk'));
 </script>
 
-<div class="fb-comments" data-href="http://yoursite.com/2013/10/22/E-96-resistance-value/index.html" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
+<div class="fb-comments" data-href="http://yoursite.com/2012/02/20/photo-test/index.html" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
       
   
 </section>
