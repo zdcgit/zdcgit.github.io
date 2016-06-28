@@ -53,6 +53,43 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2012-09-23T11:11:00.000Z"><a href="/2012/09/23/signaltap-ues-1/">2012-09-23</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2012/09/23/signaltap-ues-1/">SignalTap使用（1）</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>在quartus II中，我们可以使用其软件内部再带的SignalTap II Logic Analyzer，观测器实时信号波形，下面就来说如何使用。</p>
+<p>1、将程序编译之后，在菜单栏上点击“Tools”，选择“SignalTap II Logic Analyzer”然后就出现一个新窗口。</p>
+<p>2、在弹出的新窗口中，点击Steup（在中级白色区域下面），在Steup区域中，双击，然后出现个“Node Finder”的窗口，在Filter中，可以选择需要什么类的信号，在Look in中，可以选择想要观测的模块的内部信号。然后点击List，会在Nodes Found中列出各种型号管脚或者寄存器，对于我们需要观测的，双击，则会在右边Selected Nodes里面列出，选择完之后，点击OK即可。</p>
+<p>3、这时在Steup区域，列出我们需要观测的信号，开始设置触发条件。在“Trigger Conditions”下面选择“Basic”，然后在触发信号后面设置触发条件，不需要触发的，可以将“Trigger Enable”方框中勾去掉即可。</p>
+<p>4、设置完之后，在右边的Signal Configuration中，选择Clock，其频率要高于观测信号频率的2倍，在sample depth中选择深度，在Type中选择Continuous即可。</p>
+<iframe height="192" src="https://skydrive.live.com/embed?cid=991352ACD9F1F1CE&amp;resid=991352ACD9F1F1CE%21145&amp;authkey=AGNnDmMYPTouAFs" frameborder="0" width="319" scrolling="no"></iframe>
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2012-09-12T10:19:00.000Z"><a href="/2012/09/12/usb-blaster-driver-install/">2012-09-12</a></time>
       
       
@@ -147,49 +184,6 @@
         
           <div class="alignleft">
             <a href="/2012/09/08/Using-quartus-ii-create-a-project/#more" class="more-link">Read More</a>
-          </div>
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2012-02-20T03:17:26.000Z"><a href="/2012/02/20/photo-test/">2012-02-20</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2012/02/20/photo-test/">Win7建立wifi功能</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>想好好利用下手机的wifi功能，手机连接电脑上网吗？</p>
-<p>手机wifi是不是搜索不到笔记本建立的临时网络？</p>
-<p>有两台电脑都想上网，只有一个宽带，没有路由器，怎么办？</p>
-<p>现在就告诉大家一个简单有效的方法，在笔记本上建立一个wifi热点，供wifi手机或者其他笔记本链接</p>
-<p>综述：其实就是三段代码:（括号内部分）</p>
-<p>1.（netsh wlan set hostednetwork mode=allow ）</p>
-<p>2.（netsh wlan set hostednetwork ssid=mywifi key=12345678 ）3.(netsh wlan start hostednetwork)</p>
-<p>解释下，很简单，第一个就是设置网络承载模式为允许，第一个设置您建立的wifi用户名及密码，ssid=后面就是用户名，key=后面是密码，自己设定，第三个就开启了。</p>
-      
-    </div>
-    <footer>
-      
-        
-          <div class="alignleft">
-            <a href="/2012/02/20/photo-test/#more" class="more-link">Read More</a>
           </div>
         
         

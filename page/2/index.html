@@ -53,6 +53,39 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2013-10-22T11:50:44.000Z"><a href="/2013/10/22/E-96-resistance-value/">2013-10-22</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2013/10/22/E-96-resistance-value/">E-96电阻值代码表</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>在贴片电阻的标注中，会有01C这种的标注方法，该种方法的称作三位数数乘标注法，表示方法为XXY。<br>其中XX可以通过E-96电阻值代码表查出，XXY对应的阻值为XX对应代码值乘以10^Y。<br>如01C，通过查表可知01表示100，C对应10的2次幂，所以01C对应阻值为100×10^2=10K。<br>E-96乘数代码表和阻值代码表如下：<br><img src="http://pic.yupoo.com/zdc1122/DfS5yoke/medish.jpg" alt=""><br>电阻阻值查询软件<a href="http://pan.baidu.com/share/link?shareid=395065974&amp;uk=456472238" target="_blank" rel="external">点此下载</a>。</p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2013-10-12T16:50:08.000Z"><a href="/2013/10/13/ttl-and-cmos-difference/">2013-10-13</a></time>
       
       
@@ -400,43 +433,6 @@
           <div class="alignleft">
             <a href="/2012/11/06/c-pretreatment-questions/#more" class="more-link">Read More</a>
           </div>
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
-  <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2012-09-23T11:11:00.000Z"><a href="/2012/09/23/signaltap-ues-1/">2012-09-23</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2012/09/23/signaltap-ues-1/">SignalTap使用（1）</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>在quartus II中，我们可以使用其软件内部再带的SignalTap II Logic Analyzer，观测器实时信号波形，下面就来说如何使用。</p>
-<p>1、将程序编译之后，在菜单栏上点击“Tools”，选择“SignalTap II Logic Analyzer”然后就出现一个新窗口。</p>
-<p>2、在弹出的新窗口中，点击Steup（在中级白色区域下面），在Steup区域中，双击，然后出现个“Node Finder”的窗口，在Filter中，可以选择需要什么类的信号，在Look in中，可以选择想要观测的模块的内部信号。然后点击List，会在Nodes Found中列出各种型号管脚或者寄存器，对于我们需要观测的，双击，则会在右边Selected Nodes里面列出，选择完之后，点击OK即可。</p>
-<p>3、这时在Steup区域，列出我们需要观测的信号，开始设置触发条件。在“Trigger Conditions”下面选择“Basic”，然后在触发信号后面设置触发条件，不需要触发的，可以将“Trigger Enable”方框中勾去掉即可。</p>
-<p>4、设置完之后，在右边的Signal Configuration中，选择Clock，其频率要高于观测信号频率的2倍，在sample depth中选择深度，在Type中选择Continuous即可。</p>
-<iframe height="192" src="https://skydrive.live.com/embed?cid=991352ACD9F1F1CE&amp;resid=991352ACD9F1F1CE%21145&amp;authkey=AGNnDmMYPTouAFs" frameborder="0" width="319" scrolling="no"></iframe>
-      
-    </div>
-    <footer>
-      
         
         
       
