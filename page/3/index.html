@@ -63,11 +63,11 @@
     </header>
     <div class="entry">
       
-        <p>在quartus II中，我们可以使用其软件内部再带的SignalTap II Logic Analyzer，观测器实时信号波形，下面就来说如何使用。</p>
-<p>1、将程序编译之后，在菜单栏上点击“Tools”，选择“SignalTap II Logic Analyzer”然后就出现一个新窗口。</p>
-<p>2、在弹出的新窗口中，点击Steup（在中级白色区域下面），在Steup区域中，双击，然后出现个“Node Finder”的窗口，在Filter中，可以选择需要什么类的信号，在Look in中，可以选择想要观测的模块的内部信号。然后点击List，会在Nodes Found中列出各种型号管脚或者寄存器，对于我们需要观测的，双击，则会在右边Selected Nodes里面列出，选择完之后，点击OK即可。</p>
-<p>3、这时在Steup区域，列出我们需要观测的信号，开始设置触发条件。在“Trigger Conditions”下面选择“Basic”，然后在触发信号后面设置触发条件，不需要触发的，可以将“Trigger Enable”方框中勾去掉即可。</p>
-<p>4、设置完之后，在右边的Signal Configuration中，选择Clock，其频率要高于观测信号频率的2倍，在sample depth中选择深度，在Type中选择Continuous即可。</p>
+        <p>&#x5728;quartus II&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5176;&#x8F6F;&#x4EF6;&#x5185;&#x90E8;&#x518D;&#x5E26;&#x7684;SignalTap II Logic Analyzer&#xFF0C;&#x89C2;&#x6D4B;&#x5668;&#x5B9E;&#x65F6;&#x4FE1;&#x53F7;&#x6CE2;&#x5F62;&#xFF0C;&#x4E0B;&#x9762;&#x5C31;&#x6765;&#x8BF4;&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x3002;</p>
+<p>1&#x3001;&#x5C06;&#x7A0B;&#x5E8F;&#x7F16;&#x8BD1;&#x4E4B;&#x540E;&#xFF0C;&#x5728;&#x83DC;&#x5355;&#x680F;&#x4E0A;&#x70B9;&#x51FB;&#x201C;Tools&#x201D;&#xFF0C;&#x9009;&#x62E9;&#x201C;SignalTap II Logic Analyzer&#x201D;&#x7136;&#x540E;&#x5C31;&#x51FA;&#x73B0;&#x4E00;&#x4E2A;&#x65B0;&#x7A97;&#x53E3;&#x3002;</p>
+<p>2&#x3001;&#x5728;&#x5F39;&#x51FA;&#x7684;&#x65B0;&#x7A97;&#x53E3;&#x4E2D;&#xFF0C;&#x70B9;&#x51FB;Steup&#xFF08;&#x5728;&#x4E2D;&#x7EA7;&#x767D;&#x8272;&#x533A;&#x57DF;&#x4E0B;&#x9762;&#xFF09;&#xFF0C;&#x5728;Steup&#x533A;&#x57DF;&#x4E2D;&#xFF0C;&#x53CC;&#x51FB;&#xFF0C;&#x7136;&#x540E;&#x51FA;&#x73B0;&#x4E2A;&#x201C;Node Finder&#x201D;&#x7684;&#x7A97;&#x53E3;&#xFF0C;&#x5728;Filter&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x9700;&#x8981;&#x4EC0;&#x4E48;&#x7C7B;&#x7684;&#x4FE1;&#x53F7;&#xFF0C;&#x5728;Look in&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x60F3;&#x8981;&#x89C2;&#x6D4B;&#x7684;&#x6A21;&#x5757;&#x7684;&#x5185;&#x90E8;&#x4FE1;&#x53F7;&#x3002;&#x7136;&#x540E;&#x70B9;&#x51FB;List&#xFF0C;&#x4F1A;&#x5728;Nodes Found&#x4E2D;&#x5217;&#x51FA;&#x5404;&#x79CD;&#x578B;&#x53F7;&#x7BA1;&#x811A;&#x6216;&#x8005;&#x5BC4;&#x5B58;&#x5668;&#xFF0C;&#x5BF9;&#x4E8E;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x89C2;&#x6D4B;&#x7684;&#xFF0C;&#x53CC;&#x51FB;&#xFF0C;&#x5219;&#x4F1A;&#x5728;&#x53F3;&#x8FB9;Selected Nodes&#x91CC;&#x9762;&#x5217;&#x51FA;&#xFF0C;&#x9009;&#x62E9;&#x5B8C;&#x4E4B;&#x540E;&#xFF0C;&#x70B9;&#x51FB;OK&#x5373;&#x53EF;&#x3002;</p>
+<p>3&#x3001;&#x8FD9;&#x65F6;&#x5728;Steup&#x533A;&#x57DF;&#xFF0C;&#x5217;&#x51FA;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x89C2;&#x6D4B;&#x7684;&#x4FE1;&#x53F7;&#xFF0C;&#x5F00;&#x59CB;&#x8BBE;&#x7F6E;&#x89E6;&#x53D1;&#x6761;&#x4EF6;&#x3002;&#x5728;&#x201C;Trigger Conditions&#x201D;&#x4E0B;&#x9762;&#x9009;&#x62E9;&#x201C;Basic&#x201D;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x89E6;&#x53D1;&#x4FE1;&#x53F7;&#x540E;&#x9762;&#x8BBE;&#x7F6E;&#x89E6;&#x53D1;&#x6761;&#x4EF6;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x89E6;&#x53D1;&#x7684;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x201C;Trigger Enable&#x201D;&#x65B9;&#x6846;&#x4E2D;&#x52FE;&#x53BB;&#x6389;&#x5373;&#x53EF;&#x3002;</p>
+<p>4&#x3001;&#x8BBE;&#x7F6E;&#x5B8C;&#x4E4B;&#x540E;&#xFF0C;&#x5728;&#x53F3;&#x8FB9;&#x7684;Signal Configuration&#x4E2D;&#xFF0C;&#x9009;&#x62E9;Clock&#xFF0C;&#x5176;&#x9891;&#x7387;&#x8981;&#x9AD8;&#x4E8E;&#x89C2;&#x6D4B;&#x4FE1;&#x53F7;&#x9891;&#x7387;&#x7684;2&#x500D;&#xFF0C;&#x5728;sample depth&#x4E2D;&#x9009;&#x62E9;&#x6DF1;&#x5EA6;&#xFF0C;&#x5728;Type&#x4E2D;&#x9009;&#x62E9;Continuous&#x5373;&#x53EF;&#x3002;</p>
 <iframe height="192" src="https://skydrive.live.com/embed?cid=991352ACD9F1F1CE&amp;resid=991352ACD9F1F1CE%21145&amp;authkey=AGNnDmMYPTouAFs" frameborder="0" width="319" scrolling="no"></iframe>
       
     </div>
@@ -100,9 +100,9 @@
     </header>
     <div class="entry">
       
-        <p>装驱动就很简单了， Quartus II 的文件夹已经带了驱动程序。当你把下载线一头插到电脑的USB口，弹出硬件安装向导，你给指下路径就可以了。例如我这的路径是D:\altera\91sp2\quartus\drivers\usb-blaster</p>
-<p>然后点击工具栏上的Programmer，在出来界面中，点击Hardware Steup，选择USB blaster，点击Close。然后点击Auto Detect，这时会在右边方框中显示出相应的器件和配置芯片，此时表示驱动安装成功。</p>
-<p>在Hardware Steup，找不到USB blaster，点击Add Hardware，<br>提示“Attempted to access JTAG server – internal error code 82 occurred”，<br>一般和防火墙和杀毒软件有关，如果关掉防火墙和杀毒软件还是不行，就把杀毒软件卸载掉，我是这么解决的。</p>
+        <p>&#x88C5;&#x9A71;&#x52A8;&#x5C31;&#x5F88;&#x7B80;&#x5355;&#x4E86;&#xFF0C; Quartus II &#x7684;&#x6587;&#x4EF6;&#x5939;&#x5DF2;&#x7ECF;&#x5E26;&#x4E86;&#x9A71;&#x52A8;&#x7A0B;&#x5E8F;&#x3002;&#x5F53;&#x4F60;&#x628A;&#x4E0B;&#x8F7D;&#x7EBF;&#x4E00;&#x5934;&#x63D2;&#x5230;&#x7535;&#x8111;&#x7684;USB&#x53E3;&#xFF0C;&#x5F39;&#x51FA;&#x786C;&#x4EF6;&#x5B89;&#x88C5;&#x5411;&#x5BFC;&#xFF0C;&#x4F60;&#x7ED9;&#x6307;&#x4E0B;&#x8DEF;&#x5F84;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x3002;&#x4F8B;&#x5982;&#x6211;&#x8FD9;&#x7684;&#x8DEF;&#x5F84;&#x662F;D:\altera\91sp2\quartus\drivers\usb-blaster</p>
+<p>&#x7136;&#x540E;&#x70B9;&#x51FB;&#x5DE5;&#x5177;&#x680F;&#x4E0A;&#x7684;Programmer&#xFF0C;&#x5728;&#x51FA;&#x6765;&#x754C;&#x9762;&#x4E2D;&#xFF0C;&#x70B9;&#x51FB;Hardware Steup&#xFF0C;&#x9009;&#x62E9;USB blaster&#xFF0C;&#x70B9;&#x51FB;Close&#x3002;&#x7136;&#x540E;&#x70B9;&#x51FB;Auto Detect&#xFF0C;&#x8FD9;&#x65F6;&#x4F1A;&#x5728;&#x53F3;&#x8FB9;&#x65B9;&#x6846;&#x4E2D;&#x663E;&#x793A;&#x51FA;&#x76F8;&#x5E94;&#x7684;&#x5668;&#x4EF6;&#x548C;&#x914D;&#x7F6E;&#x82AF;&#x7247;&#xFF0C;&#x6B64;&#x65F6;&#x8868;&#x793A;&#x9A71;&#x52A8;&#x5B89;&#x88C5;&#x6210;&#x529F;&#x3002;</p>
+<p>&#x5728;Hardware Steup&#xFF0C;&#x627E;&#x4E0D;&#x5230;USB blaster&#xFF0C;&#x70B9;&#x51FB;Add Hardware&#xFF0C;<br>&#x63D0;&#x793A;&#x201C;Attempted to access JTAG server &#x2013; internal error code 82 occurred&#x201D;&#xFF0C;<br>&#x4E00;&#x822C;&#x548C;&#x9632;&#x706B;&#x5899;&#x548C;&#x6740;&#x6BD2;&#x8F6F;&#x4EF6;&#x6709;&#x5173;&#xFF0C;&#x5982;&#x679C;&#x5173;&#x6389;&#x9632;&#x706B;&#x5899;&#x548C;&#x6740;&#x6BD2;&#x8F6F;&#x4EF6;&#x8FD8;&#x662F;&#x4E0D;&#x884C;&#xFF0C;&#x5C31;&#x628A;&#x6740;&#x6BD2;&#x8F6F;&#x4EF6;&#x5378;&#x8F7D;&#x6389;&#xFF0C;&#x6211;&#x662F;&#x8FD9;&#x4E48;&#x89E3;&#x51B3;&#x7684;&#x3002;</p>
 
       
     </div>
@@ -135,10 +135,10 @@
     </header>
     <div class="entry">
       
-        <p>本文档以Cyclone IV系列芯片作为说明，具体电路查看相关芯片的手册即可。其它芯片看具体情况。</p>
-<p>&nbsp;</p>
-<p><strong>JTAG配置模式：</strong>该模式是将程序直接下载到FPGA中，但是当FPGA断电之后，程序也丢失。将程序compilation之后，选择工具栏上的Programmer，然后出现一个界面，点击Hardware Steup，选择USB blaster，然后点击Close。在Mode中选择JTAG，然后点击左边的Add file，选择.sof文件，然后选中Program/Configure下的方框，再点击Start，在Progress中显示进度，当显示successful时，表示下载成功。此时FPGA不能断电，断电之后需重新下载。</p>
-<p><strong>
+        <p>&#x672C;&#x6587;&#x6863;&#x4EE5;Cyclone IV&#x7CFB;&#x5217;&#x82AF;&#x7247;&#x4F5C;&#x4E3A;&#x8BF4;&#x660E;&#xFF0C;&#x5177;&#x4F53;&#x7535;&#x8DEF;&#x67E5;&#x770B;&#x76F8;&#x5173;&#x82AF;&#x7247;&#x7684;&#x624B;&#x518C;&#x5373;&#x53EF;&#x3002;&#x5176;&#x5B83;&#x82AF;&#x7247;&#x770B;&#x5177;&#x4F53;&#x60C5;&#x51B5;&#x3002;</p>
+<p>&#xA0;</p>
+<p><strong>JTAG&#x914D;&#x7F6E;&#x6A21;&#x5F0F;&#xFF1A;</strong>&#x8BE5;&#x6A21;&#x5F0F;&#x662F;&#x5C06;&#x7A0B;&#x5E8F;&#x76F4;&#x63A5;&#x4E0B;&#x8F7D;&#x5230;FPGA&#x4E2D;&#xFF0C;&#x4F46;&#x662F;&#x5F53;FPGA&#x65AD;&#x7535;&#x4E4B;&#x540E;&#xFF0C;&#x7A0B;&#x5E8F;&#x4E5F;&#x4E22;&#x5931;&#x3002;&#x5C06;&#x7A0B;&#x5E8F;compilation&#x4E4B;&#x540E;&#xFF0C;&#x9009;&#x62E9;&#x5DE5;&#x5177;&#x680F;&#x4E0A;&#x7684;Programmer&#xFF0C;&#x7136;&#x540E;&#x51FA;&#x73B0;&#x4E00;&#x4E2A;&#x754C;&#x9762;&#xFF0C;&#x70B9;&#x51FB;Hardware Steup&#xFF0C;&#x9009;&#x62E9;USB blaster&#xFF0C;&#x7136;&#x540E;&#x70B9;&#x51FB;Close&#x3002;&#x5728;Mode&#x4E2D;&#x9009;&#x62E9;JTAG&#xFF0C;&#x7136;&#x540E;&#x70B9;&#x51FB;&#x5DE6;&#x8FB9;&#x7684;Add file&#xFF0C;&#x9009;&#x62E9;.sof&#x6587;&#x4EF6;&#xFF0C;&#x7136;&#x540E;&#x9009;&#x4E2D;Program/Configure&#x4E0B;&#x7684;&#x65B9;&#x6846;&#xFF0C;&#x518D;&#x70B9;&#x51FB;Start&#xFF0C;&#x5728;Progress&#x4E2D;&#x663E;&#x793A;&#x8FDB;&#x5EA6;&#xFF0C;&#x5F53;&#x663E;&#x793A;successful&#x65F6;&#xFF0C;&#x8868;&#x793A;&#x4E0B;&#x8F7D;&#x6210;&#x529F;&#x3002;&#x6B64;&#x65F6;FPGA&#x4E0D;&#x80FD;&#x65AD;&#x7535;&#xFF0C;&#x65AD;&#x7535;&#x4E4B;&#x540E;&#x9700;&#x91CD;&#x65B0;&#x4E0B;&#x8F7D;&#x3002;</p>
+<p><strong></strong></p>
       
     </div>
     <footer>
@@ -174,8 +174,8 @@
     </header>
     <div class="entry">
       
-        <p>环境：quartus II版本: 12.0sp1</p>
-<p>1、打开quartus II软件，如图1所示（软件设置默认）。创建新的工程，选择Create a New Project；如果打开已有的项目，选择Open Existing Project；如果打开最近使用的项目，直接选择Open Recent Project下面显示的即可。当然，这些操作也可以在打开界面，选择“File”，下拉选项里面选择。</p>
+        <p>&#x73AF;&#x5883;&#xFF1A;quartus II&#x7248;&#x672C;: 12.0sp1</p>
+<p>1&#x3001;&#x6253;&#x5F00;quartus II&#x8F6F;&#x4EF6;&#xFF0C;&#x5982;&#x56FE;1&#x6240;&#x793A;&#xFF08;&#x8F6F;&#x4EF6;&#x8BBE;&#x7F6E;&#x9ED8;&#x8BA4;&#xFF09;&#x3002;&#x521B;&#x5EFA;&#x65B0;&#x7684;&#x5DE5;&#x7A0B;&#xFF0C;&#x9009;&#x62E9;Create a New Project&#xFF1B;&#x5982;&#x679C;&#x6253;&#x5F00;&#x5DF2;&#x6709;&#x7684;&#x9879;&#x76EE;&#xFF0C;&#x9009;&#x62E9;Open Existing Project&#xFF1B;&#x5982;&#x679C;&#x6253;&#x5F00;&#x6700;&#x8FD1;&#x4F7F;&#x7528;&#x7684;&#x9879;&#x76EE;&#xFF0C;&#x76F4;&#x63A5;&#x9009;&#x62E9;Open Recent Project&#x4E0B;&#x9762;&#x663E;&#x793A;&#x7684;&#x5373;&#x53EF;&#x3002;&#x5F53;&#x7136;&#xFF0C;&#x8FD9;&#x4E9B;&#x64CD;&#x4F5C;&#x4E5F;&#x53EF;&#x4EE5;&#x5728;&#x6253;&#x5F00;&#x754C;&#x9762;&#xFF0C;&#x9009;&#x62E9;&#x201C;File&#x201D;&#xFF0C;&#x4E0B;&#x62C9;&#x9009;&#x9879;&#x91CC;&#x9762;&#x9009;&#x62E9;&#x3002;</p>
 <iframe src="https://skydrive.live.com/embed?cid=991352ACD9F1F1CE&amp;resid=991352ACD9F1F1CE%21136&amp;authkey=AAk1e0Vf63ru0MQ" frameborder="0" scrolling="no" width="319" height="237"></iframe><br><div id="extendedEntryBreak"></div><br>
       
     </div>
@@ -212,14 +212,14 @@
     </header>
     <div class="entry">
       
-        <p>想好好利用下手机的wifi功能，手机连接电脑上网吗？</p>
-<p>手机wifi是不是搜索不到笔记本建立的临时网络？</p>
-<p>有两台电脑都想上网，只有一个宽带，没有路由器，怎么办？</p>
-<p>现在就告诉大家一个简单有效的方法，在笔记本上建立一个wifi热点，供wifi手机或者其他笔记本链接</p>
-<p>综述：其实就是三段代码:（括号内部分）</p>
-<p>1.（netsh wlan set hostednetwork mode=allow ）</p>
-<p>2.（netsh wlan set hostednetwork ssid=mywifi key=12345678 ）3.(netsh wlan start hostednetwork)</p>
-<p>解释下，很简单，第一个就是设置网络承载模式为允许，第一个设置您建立的wifi用户名及密码，ssid=后面就是用户名，key=后面是密码，自己设定，第三个就开启了。</p>
+        <p>&#x60F3;&#x597D;&#x597D;&#x5229;&#x7528;&#x4E0B;&#x624B;&#x673A;&#x7684;wifi&#x529F;&#x80FD;&#xFF0C;&#x624B;&#x673A;&#x8FDE;&#x63A5;&#x7535;&#x8111;&#x4E0A;&#x7F51;&#x5417;&#xFF1F;</p>
+<p>&#x624B;&#x673A;wifi&#x662F;&#x4E0D;&#x662F;&#x641C;&#x7D22;&#x4E0D;&#x5230;&#x7B14;&#x8BB0;&#x672C;&#x5EFA;&#x7ACB;&#x7684;&#x4E34;&#x65F6;&#x7F51;&#x7EDC;&#xFF1F;</p>
+<p>&#x6709;&#x4E24;&#x53F0;&#x7535;&#x8111;&#x90FD;&#x60F3;&#x4E0A;&#x7F51;&#xFF0C;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x5BBD;&#x5E26;&#xFF0C;&#x6CA1;&#x6709;&#x8DEF;&#x7531;&#x5668;&#xFF0C;&#x600E;&#x4E48;&#x529E;&#xFF1F;</p>
+<p>&#x73B0;&#x5728;&#x5C31;&#x544A;&#x8BC9;&#x5927;&#x5BB6;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x6709;&#x6548;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x5728;&#x7B14;&#x8BB0;&#x672C;&#x4E0A;&#x5EFA;&#x7ACB;&#x4E00;&#x4E2A;wifi&#x70ED;&#x70B9;&#xFF0C;&#x4F9B;wifi&#x624B;&#x673A;&#x6216;&#x8005;&#x5176;&#x4ED6;&#x7B14;&#x8BB0;&#x672C;&#x94FE;&#x63A5;</p>
+<p>&#x7EFC;&#x8FF0;&#xFF1A;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x4E09;&#x6BB5;&#x4EE3;&#x7801;:&#xFF08;&#x62EC;&#x53F7;&#x5185;&#x90E8;&#x5206;&#xFF09;</p>
+<p>1.&#xFF08;netsh wlan set hostednetwork mode=allow &#xFF09;</p>
+<p>2.&#xFF08;netsh wlan set hostednetwork ssid=mywifi key=12345678 &#xFF09;3.(netsh wlan start hostednetwork)</p>
+<p>&#x89E3;&#x91CA;&#x4E0B;&#xFF0C;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x5C31;&#x662F;&#x8BBE;&#x7F6E;&#x7F51;&#x7EDC;&#x627F;&#x8F7D;&#x6A21;&#x5F0F;&#x4E3A;&#x5141;&#x8BB8;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x8BBE;&#x7F6E;&#x60A8;&#x5EFA;&#x7ACB;&#x7684;wifi&#x7528;&#x6237;&#x540D;&#x53CA;&#x5BC6;&#x7801;&#xFF0C;ssid=&#x540E;&#x9762;&#x5C31;&#x662F;&#x7528;&#x6237;&#x540D;&#xFF0C;key=&#x540E;&#x9762;&#x662F;&#x5BC6;&#x7801;&#xFF0C;&#x81EA;&#x5DF1;&#x8BBE;&#x5B9A;&#xFF0C;&#x7B2C;&#x4E09;&#x4E2A;&#x5C31;&#x5F00;&#x542F;&#x4E86;&#x3002;</p>
       
     </div>
     <footer>

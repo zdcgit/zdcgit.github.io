@@ -62,43 +62,43 @@
     </header>
     <div class="entry">
       
-        <p>在一个project中，会有多个源文件，就会存在一个文件调用另外一个文件中的变量或者函数，下面以自己在实际过程中所用到的加以说明。</p>
-<p><strong>1、引用外部全局变量(无”.h”文件)</strong></p>
-<p>如有stu.c和main.c两个源文件，现在要在main.c文件中使用stu.c中一个全局变量”num”，</p>
+        <p>&#x5728;&#x4E00;&#x4E2A;project&#x4E2D;&#xFF0C;&#x4F1A;&#x6709;&#x591A;&#x4E2A;&#x6E90;&#x6587;&#x4EF6;&#xFF0C;&#x5C31;&#x4F1A;&#x5B58;&#x5728;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x8C03;&#x7528;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x53D8;&#x91CF;&#x6216;&#x8005;&#x51FD;&#x6570;&#xFF0C;&#x4E0B;&#x9762;&#x4EE5;&#x81EA;&#x5DF1;&#x5728;&#x5B9E;&#x9645;&#x8FC7;&#x7A0B;&#x4E2D;&#x6240;&#x7528;&#x5230;&#x7684;&#x52A0;&#x4EE5;&#x8BF4;&#x660E;&#x3002;</p>
+<p><strong>1&#x3001;&#x5F15;&#x7528;&#x5916;&#x90E8;&#x5168;&#x5C40;&#x53D8;&#x91CF;(&#x65E0;&#x201D;.h&#x201D;&#x6587;&#x4EF6;)</strong></p>
+<p>&#x5982;&#x6709;stu.c&#x548C;main.c&#x4E24;&#x4E2A;&#x6E90;&#x6587;&#x4EF6;&#xFF0C;&#x73B0;&#x5728;&#x8981;&#x5728;main.c&#x6587;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528;stu.c&#x4E2D;&#x4E00;&#x4E2A;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x201D;num&#x201D;&#xFF0C;</p>
 <pre><code><span class="comment">//stu.c</span>
-<span class="preprocessor">#<span class="keyword">include</span> <span class="string">"stdio.h"</span>  </span>
-<span class="keyword">int</span> num = <span class="number">2</span>; <span class="comment">//extern可以省略  </span>
+<span class="preprocessor">#<span class="keyword">include</span> <span class="string">&quot;stdio.h&quot;</span>  </span>
+<span class="keyword">int</span> num = <span class="number">2</span>; <span class="comment">//extern&#x53EF;&#x4EE5;&#x7701;&#x7565;  </span>
 
 <span class="comment">//main.c</span>
-<span class="preprocessor">#<span class="keyword">include</span> <span class="string">"stdio.h"</span></span>
+<span class="preprocessor">#<span class="keyword">include</span> <span class="string">&quot;stdio.h&quot;</span></span>
 <span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span>
 </span>{
-     <span class="keyword">extern</span> <span class="keyword">int</span> num; <span class="comment">//声明要使用的外部变量，前面一定要加上extern</span>
-     <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,num);
+     <span class="keyword">extern</span> <span class="keyword">int</span> num; <span class="comment">//&#x58F0;&#x660E;&#x8981;&#x4F7F;&#x7528;&#x7684;&#x5916;&#x90E8;&#x53D8;&#x91CF;&#xFF0C;&#x524D;&#x9762;&#x4E00;&#x5B9A;&#x8981;&#x52A0;&#x4E0A;extern</span>
+     <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,num);
      <span class="keyword">return</span> <span class="number">0</span>;
 }
-</code></pre><p>程序运行结果为：2<br><a id="more"></a></p>
-<p><em>当一个文件要定义或使用外部文件中的变量时，需要在定义或使用前用extern关键字声明其为外部变量。</em></p>
-<p><strong>2、引用外部全局变量(使用“.h”文件)</strong></p>
-<p>一般情况下，模块化程序文件，提供一个.c文件和对应的一个.h文件，如stu.c和stu.h<br>在stu.h文件中声明变量num</p>
+</code></pre><p>&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x4E3A;&#xFF1A;2<br><a id="more"></a></p>
+<p><em>&#x5F53;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x8981;&#x5B9A;&#x4E49;&#x6216;&#x4F7F;&#x7528;&#x5916;&#x90E8;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x53D8;&#x91CF;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x5728;&#x5B9A;&#x4E49;&#x6216;&#x4F7F;&#x7528;&#x524D;&#x7528;extern&#x5173;&#x952E;&#x5B57;&#x58F0;&#x660E;&#x5176;&#x4E3A;&#x5916;&#x90E8;&#x53D8;&#x91CF;&#x3002;</em></p>
+<p><strong>2&#x3001;&#x5F15;&#x7528;&#x5916;&#x90E8;&#x5168;&#x5C40;&#x53D8;&#x91CF;(&#x4F7F;&#x7528;&#x201C;.h&#x201D;&#x6587;&#x4EF6;)</strong></p>
+<p>&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6A21;&#x5757;&#x5316;&#x7A0B;&#x5E8F;&#x6587;&#x4EF6;&#xFF0C;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;.c&#x6587;&#x4EF6;&#x548C;&#x5BF9;&#x5E94;&#x7684;&#x4E00;&#x4E2A;.h&#x6587;&#x4EF6;&#xFF0C;&#x5982;stu.c&#x548C;stu.h<br>&#x5728;stu.h&#x6587;&#x4EF6;&#x4E2D;&#x58F0;&#x660E;&#x53D8;&#x91CF;num</p>
 <pre><code><span class="comment">//stu.h</span>
 <span class="built_in">int</span> <span class="built_in">num</span>;
-</code></pre><p>在stu.c文件中赋值，同时包含stu.h</p>
+</code></pre><p>&#x5728;stu.c&#x6587;&#x4EF6;&#x4E2D;&#x8D4B;&#x503C;&#xFF0C;&#x540C;&#x65F6;&#x5305;&#x542B;stu.h</p>
 <pre><code><span class="comment">//stu.c</span>
-<span class="preprocessor">#<span class="keyword">include</span> <span class="string">"stdio.h"</span></span>
-<span class="preprocessor">#<span class="keyword">include</span><span class="string">"stu.h"</span>  //包含stu.h</span>
+<span class="preprocessor">#<span class="keyword">include</span> <span class="string">&quot;stdio.h&quot;</span></span>
+<span class="preprocessor">#<span class="keyword">include</span><span class="string">&quot;stu.h&quot;</span>  //&#x5305;&#x542B;stu.h</span>
 num = <span class="number">2</span>;  
-</code></pre><p>现在要在main.c文件中使用num的值，则只需在其头文件中包含stu.h</p>
+</code></pre><p>&#x73B0;&#x5728;&#x8981;&#x5728;main.c&#x6587;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528;num&#x7684;&#x503C;&#xFF0C;&#x5219;&#x53EA;&#x9700;&#x5728;&#x5176;&#x5934;&#x6587;&#x4EF6;&#x4E2D;&#x5305;&#x542B;stu.h</p>
 <pre><code><span class="comment">//main.c  </span>
-<span class="preprocessor">#<span class="keyword">include</span> <span class="string">"stdio.h"</span>  </span>
-<span class="preprocessor">#<span class="keyword">include</span> <span class="string">"stu.h"</span> //包含stu.h  </span>
+<span class="preprocessor">#<span class="keyword">include</span> <span class="string">&quot;stdio.h&quot;</span>  </span>
+<span class="preprocessor">#<span class="keyword">include</span> <span class="string">&quot;stu.h&quot;</span> //&#x5305;&#x542B;stu.h  </span>
 <span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span>  
 </span>{  
-      <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,num);  
+      <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,num);  
       <span class="keyword">return</span> <span class="number">0</span>;  
 }  
-</code></pre><p>程序运行结果为：2<br>该方法只需增加一个.h文件，在该文件中声明所要使用的变量，然后在.c文件中的头文件中包含即可，不需要在使用前加以特别声明。<em>  <p>以上两种方法都可以在一个文件中使用外部变量，该方法同样适用于结构体和函数。  </p><p></p></em>一般情况下，在实际工程中使用第二种方法，尤其对于结构体和函数。如在stu.h文件中声明，在stu.c文件中定义，如果main.c文件需要使用，只需在其头文件中包含对应的stu.h文件即可。_</p>
-<p><u><strong>以上对于VC环境验证无误，但是在CCS3.3中，存在部分不同点，具体有待验证。</strong></u></p>
+</code></pre><p>&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x4E3A;&#xFF1A;2<br>&#x8BE5;&#x65B9;&#x6CD5;&#x53EA;&#x9700;&#x589E;&#x52A0;&#x4E00;&#x4E2A;.h&#x6587;&#x4EF6;&#xFF0C;&#x5728;&#x8BE5;&#x6587;&#x4EF6;&#x4E2D;&#x58F0;&#x660E;&#x6240;&#x8981;&#x4F7F;&#x7528;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x7136;&#x540E;&#x5728;.c&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x5934;&#x6587;&#x4EF6;&#x4E2D;&#x5305;&#x542B;&#x5373;&#x53EF;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x5728;&#x4F7F;&#x7528;&#x524D;&#x52A0;&#x4EE5;&#x7279;&#x522B;&#x58F0;&#x660E;&#x3002;<em>  <p>&#x4EE5;&#x4E0A;&#x4E24;&#x79CD;&#x65B9;&#x6CD5;&#x90FD;&#x53EF;&#x4EE5;&#x5728;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528;&#x5916;&#x90E8;&#x53D8;&#x91CF;&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x540C;&#x6837;&#x9002;&#x7528;&#x4E8E;&#x7ED3;&#x6784;&#x4F53;&#x548C;&#x51FD;&#x6570;&#x3002;  </p><p></p></em>&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5728;&#x5B9E;&#x9645;&#x5DE5;&#x7A0B;&#x4E2D;&#x4F7F;&#x7528;&#x7B2C;&#x4E8C;&#x79CD;&#x65B9;&#x6CD5;&#xFF0C;&#x5C24;&#x5176;&#x5BF9;&#x4E8E;&#x7ED3;&#x6784;&#x4F53;&#x548C;&#x51FD;&#x6570;&#x3002;&#x5982;&#x5728;stu.h&#x6587;&#x4EF6;&#x4E2D;&#x58F0;&#x660E;&#xFF0C;&#x5728;stu.c&#x6587;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;&#xFF0C;&#x5982;&#x679C;main.c&#x6587;&#x4EF6;&#x9700;&#x8981;&#x4F7F;&#x7528;&#xFF0C;&#x53EA;&#x9700;&#x5728;&#x5176;&#x5934;&#x6587;&#x4EF6;&#x4E2D;&#x5305;&#x542B;&#x5BF9;&#x5E94;&#x7684;stu.h&#x6587;&#x4EF6;&#x5373;&#x53EF;&#x3002;_</p>
+<p><u><strong>&#x4EE5;&#x4E0A;&#x5BF9;&#x4E8E;VC&#x73AF;&#x5883;&#x9A8C;&#x8BC1;&#x65E0;&#x8BEF;&#xFF0C;&#x4F46;&#x662F;&#x5728;CCS3.3&#x4E2D;&#xFF0C;&#x5B58;&#x5728;&#x90E8;&#x5206;&#x4E0D;&#x540C;&#x70B9;&#xFF0C;&#x5177;&#x4F53;&#x6709;&#x5F85;&#x9A8C;&#x8BC1;&#x3002;</strong></u></p>
 
       
     </div>

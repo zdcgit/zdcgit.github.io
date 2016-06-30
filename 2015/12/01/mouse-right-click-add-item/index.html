@@ -62,10 +62,10 @@
     </header>
     <div class="entry">
       
-        <h2 id="1-在空白处右键添加">1.在空白处右键添加</h2><p>打开注册表，找到HKEY_CLASSES_ROOT\Directory\Background\shell，在shell上右键，新建-&gt;项，名字修改为CommandPrompt,修改右侧的默认值(双击默认)，在“数值数据”一项输入“打开CMD”；<br>再在CommadPrompt下新建子项，名字修改为command，修改右侧的默认值为“C:\windows\system32\cmd.exe”。  </p>
-<p>##2.在文件夹上右键添加<br>打开注册表，找到HKEY_CLASSES_ROOT\Folder\shell，然后就和1同样操作。  </p>
-<p>##3.在文件上右键添加<br>打开注册表，找到HKEY_CLASSES_ROOT*\shell，然后就和1同样操作。</p>
-<p><strong>注：关于“c:\windows\system32\cmd.exe”这个值，有的说是为“cmd.exe cd “%1””，还有其它写法，我自己是按照“c:\windows\system32\cmd.exe”这个设置成功的。</strong></p>
+        <h2 id="1-&#x5728;&#x7A7A;&#x767D;&#x5904;&#x53F3;&#x952E;&#x6DFB;&#x52A0;">1.&#x5728;&#x7A7A;&#x767D;&#x5904;&#x53F3;&#x952E;&#x6DFB;&#x52A0;</h2><p>&#x6253;&#x5F00;&#x6CE8;&#x518C;&#x8868;&#xFF0C;&#x627E;&#x5230;HKEY_CLASSES_ROOT\Directory\Background\shell&#xFF0C;&#x5728;shell&#x4E0A;&#x53F3;&#x952E;&#xFF0C;&#x65B0;&#x5EFA;-&gt;&#x9879;&#xFF0C;&#x540D;&#x5B57;&#x4FEE;&#x6539;&#x4E3A;CommandPrompt,&#x4FEE;&#x6539;&#x53F3;&#x4FA7;&#x7684;&#x9ED8;&#x8BA4;&#x503C;(&#x53CC;&#x51FB;&#x9ED8;&#x8BA4;)&#xFF0C;&#x5728;&#x201C;&#x6570;&#x503C;&#x6570;&#x636E;&#x201D;&#x4E00;&#x9879;&#x8F93;&#x5165;&#x201C;&#x6253;&#x5F00;CMD&#x201D;&#xFF1B;<br>&#x518D;&#x5728;CommadPrompt&#x4E0B;&#x65B0;&#x5EFA;&#x5B50;&#x9879;&#xFF0C;&#x540D;&#x5B57;&#x4FEE;&#x6539;&#x4E3A;command&#xFF0C;&#x4FEE;&#x6539;&#x53F3;&#x4FA7;&#x7684;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;&#x201C;C:\windows\system32\cmd.exe&#x201D;&#x3002;  </p>
+<p>##2.&#x5728;&#x6587;&#x4EF6;&#x5939;&#x4E0A;&#x53F3;&#x952E;&#x6DFB;&#x52A0;<br>&#x6253;&#x5F00;&#x6CE8;&#x518C;&#x8868;&#xFF0C;&#x627E;&#x5230;HKEY_CLASSES_ROOT\Folder\shell&#xFF0C;&#x7136;&#x540E;&#x5C31;&#x548C;1&#x540C;&#x6837;&#x64CD;&#x4F5C;&#x3002;  </p>
+<p>##3.&#x5728;&#x6587;&#x4EF6;&#x4E0A;&#x53F3;&#x952E;&#x6DFB;&#x52A0;<br>&#x6253;&#x5F00;&#x6CE8;&#x518C;&#x8868;&#xFF0C;&#x627E;&#x5230;HKEY_CLASSES_ROOT*\shell&#xFF0C;&#x7136;&#x540E;&#x5C31;&#x548C;1&#x540C;&#x6837;&#x64CD;&#x4F5C;&#x3002;</p>
+<p><strong>&#x6CE8;&#xFF1A;&#x5173;&#x4E8E;&#x201C;c:\windows\system32\cmd.exe&#x201D;&#x8FD9;&#x4E2A;&#x503C;&#xFF0C;&#x6709;&#x7684;&#x8BF4;&#x662F;&#x4E3A;&#x201C;cmd.exe cd &#x201C;%1&#x201D;&#x201D;&#xFF0C;&#x8FD8;&#x6709;&#x5176;&#x5B83;&#x5199;&#x6CD5;&#xFF0C;&#x6211;&#x81EA;&#x5DF1;&#x662F;&#x6309;&#x7167;&#x201C;c:\windows\system32\cmd.exe&#x201D;&#x8FD9;&#x4E2A;&#x8BBE;&#x7F6E;&#x6210;&#x529F;&#x7684;&#x3002;</strong></p>
 
       
     </div>

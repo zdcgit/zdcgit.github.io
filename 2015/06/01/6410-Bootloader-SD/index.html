@@ -62,22 +62,22 @@
     </header>
     <div class="entry">
       
-        <p>关于6410的启动以及启动原理，很多地方都有介绍，这里主要介绍的是从SD卡启动，然后通过串口download程序。先下载相应的<a href="http://pan.baidu.com/s/1geulQKj" target="_blank" rel="external">文件和工具</a>。　</p>
-<h2 id="一-SD卡烧录">一.SD卡烧录</h2><p>首先将一段bootloader烧录到SD卡中去，具体步骤如下：<br><a id="more"></a></p>
+        <p>&#x5173;&#x4E8E;6410&#x7684;&#x542F;&#x52A8;&#x4EE5;&#x53CA;&#x542F;&#x52A8;&#x539F;&#x7406;&#xFF0C;&#x5F88;&#x591A;&#x5730;&#x65B9;&#x90FD;&#x6709;&#x4ECB;&#x7ECD;&#xFF0C;&#x8FD9;&#x91CC;&#x4E3B;&#x8981;&#x4ECB;&#x7ECD;&#x7684;&#x662F;&#x4ECE;SD&#x5361;&#x542F;&#x52A8;&#xFF0C;&#x7136;&#x540E;&#x901A;&#x8FC7;&#x4E32;&#x53E3;download&#x7A0B;&#x5E8F;&#x3002;&#x5148;&#x4E0B;&#x8F7D;&#x76F8;&#x5E94;&#x7684;<a href="http://pan.baidu.com/s/1geulQKj" target="_blank" rel="external">&#x6587;&#x4EF6;&#x548C;&#x5DE5;&#x5177;</a>&#x3002;&#x3000;</p>
+<h2 id="&#x4E00;-SD&#x5361;&#x70E7;&#x5F55;">&#x4E00;.SD&#x5361;&#x70E7;&#x5F55;</h2><p>&#x9996;&#x5148;&#x5C06;&#x4E00;&#x6BB5;bootloader&#x70E7;&#x5F55;&#x5230;SD&#x5361;&#x4E2D;&#x53BB;&#xFF0C;&#x5177;&#x4F53;&#x6B65;&#x9AA4;&#x5982;&#x4E0B;&#xFF1A;<br><a id="more"></a></p>
 <ol>
-<li>准备好一张SD卡和读卡器，通过读卡器插入电脑USB端口；  </li>
-<li>以管理员身份打开MoviNand.exe，根据SD卡类型在SD Type后选择SD或者SDHC，在SD Volume中选择插入的卡的盘符(如果没有的话，点击后面的Scan);  </li>
-<li>在Bootloader栏中，点击Brows，选择刚刚下载的uart_boot.bin文件，然后点击Program。 </li>
-<li>至此，SD卡烧录成功。 </li>
+<li>&#x51C6;&#x5907;&#x597D;&#x4E00;&#x5F20;SD&#x5361;&#x548C;&#x8BFB;&#x5361;&#x5668;&#xFF0C;&#x901A;&#x8FC7;&#x8BFB;&#x5361;&#x5668;&#x63D2;&#x5165;&#x7535;&#x8111;USB&#x7AEF;&#x53E3;&#xFF1B;  </li>
+<li>&#x4EE5;&#x7BA1;&#x7406;&#x5458;&#x8EAB;&#x4EFD;&#x6253;&#x5F00;MoviNand.exe&#xFF0C;&#x6839;&#x636E;SD&#x5361;&#x7C7B;&#x578B;&#x5728;SD Type&#x540E;&#x9009;&#x62E9;SD&#x6216;&#x8005;SDHC&#xFF0C;&#x5728;SD Volume&#x4E2D;&#x9009;&#x62E9;&#x63D2;&#x5165;&#x7684;&#x5361;&#x7684;&#x76D8;&#x7B26;(&#x5982;&#x679C;&#x6CA1;&#x6709;&#x7684;&#x8BDD;&#xFF0C;&#x70B9;&#x51FB;&#x540E;&#x9762;&#x7684;Scan);  </li>
+<li>&#x5728;Bootloader&#x680F;&#x4E2D;&#xFF0C;&#x70B9;&#x51FB;Brows&#xFF0C;&#x9009;&#x62E9;&#x521A;&#x521A;&#x4E0B;&#x8F7D;&#x7684;uart_boot.bin&#x6587;&#x4EF6;&#xFF0C;&#x7136;&#x540E;&#x70B9;&#x51FB;Program&#x3002; </li>
+<li>&#x81F3;&#x6B64;&#xFF0C;SD&#x5361;&#x70E7;&#x5F55;&#x6210;&#x529F;&#x3002; </li>
 </ol>
-<p>如果SD卡烧录失败，检查下是否是以管理员身份启动MoviNand.exe的。　　</p>
-<h2 id="二-下载程序">二.下载程序 　　</h2><p>1.将烧录好的SD卡插入开发板中，将开发板的串口(Uart0)与PC连接；<br>2.打开UartDownload.exe软件，选择对应的COM口，点击Open打开串口；<br>3.打开开发板的电源，这时候在接收区有显示  </p>
+<p>&#x5982;&#x679C;SD&#x5361;&#x70E7;&#x5F55;&#x5931;&#x8D25;&#xFF0C;&#x68C0;&#x67E5;&#x4E0B;&#x662F;&#x5426;&#x662F;&#x4EE5;&#x7BA1;&#x7406;&#x5458;&#x8EAB;&#x4EFD;&#x542F;&#x52A8;MoviNand.exe&#x7684;&#x3002;&#x3000;&#x3000;</p>
+<h2 id="&#x4E8C;-&#x4E0B;&#x8F7D;&#x7A0B;&#x5E8F;">&#x4E8C;.&#x4E0B;&#x8F7D;&#x7A0B;&#x5E8F; &#x3000;&#x3000;</h2><p>1.&#x5C06;&#x70E7;&#x5F55;&#x597D;&#x7684;SD&#x5361;&#x63D2;&#x5165;&#x5F00;&#x53D1;&#x677F;&#x4E2D;&#xFF0C;&#x5C06;&#x5F00;&#x53D1;&#x677F;&#x7684;&#x4E32;&#x53E3;(Uart0)&#x4E0E;PC&#x8FDE;&#x63A5;&#xFF1B;<br>2.&#x6253;&#x5F00;UartDownload.exe&#x8F6F;&#x4EF6;&#xFF0C;&#x9009;&#x62E9;&#x5BF9;&#x5E94;&#x7684;COM&#x53E3;&#xFF0C;&#x70B9;&#x51FB;Open&#x6253;&#x5F00;&#x4E32;&#x53E3;&#xFF1B;<br>3.&#x6253;&#x5F00;&#x5F00;&#x53D1;&#x677F;&#x7684;&#x7535;&#x6E90;&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#x5728;&#x63A5;&#x6536;&#x533A;&#x6709;&#x663E;&#x793A;  </p>
 <pre><code><span class="function_or_atom">uart_boot</span> <span class="function_or_atom">version</span>: <span class="variable">V1</span>.<span class="number">0</span><span class="exclamation_mark">!</span>
 <span class="variable">Please</span> <span class="variable">Download</span> <span class="variable">File</span><span class="exclamation_mark">!</span>
-</code></pre><p>4.此时表示SD卡上的Bootloader加载成功；<br>5.点击下载栏的Brows，选择uart.bin文件，然后点击Download；<br>6.下载完成之后，在接收区有显示  </p>
+</code></pre><p>4.&#x6B64;&#x65F6;&#x8868;&#x793A;SD&#x5361;&#x4E0A;&#x7684;Bootloader&#x52A0;&#x8F7D;&#x6210;&#x529F;&#xFF1B;<br>5.&#x70B9;&#x51FB;&#x4E0B;&#x8F7D;&#x680F;&#x7684;Brows&#xFF0C;&#x9009;&#x62E9;uart.bin&#x6587;&#x4EF6;&#xFF0C;&#x7136;&#x540E;&#x70B9;&#x51FB;Download&#xFF1B;<br>6.&#x4E0B;&#x8F7D;&#x5B8C;&#x6210;&#x4E4B;&#x540E;&#xFF0C;&#x5728;&#x63A5;&#x6536;&#x533A;&#x6709;&#x663E;&#x793A;  </p>
 <pre><code><span class="keyword">this</span> <span class="keyword">is</span> uart0 test  
-</code></pre><p>7.至此，整个过程完成，今后写完程序之后，可以使用UartDownload.exe下载程序即可。  </p>
-<p>如果在2.3步失败，按照以下步骤检查：<br>首先检查串口是否OK；<br>如果没有问题，则将SD卡插入电脑，在磁盘管理器中查看SD卡是否存在未分配空间，如果存在未分配空间，则需要将SD卡格式化，格式化之后再次检查是否存在未分配空间，完成之后再从第一步SD卡烧录开始。<br><em>UartDownload.exe软件除了下载、发送单字符串和串口设置外，其它功能暂时不能使用，后面有待完善。</em></p>
+</code></pre><p>7.&#x81F3;&#x6B64;&#xFF0C;&#x6574;&#x4E2A;&#x8FC7;&#x7A0B;&#x5B8C;&#x6210;&#xFF0C;&#x4ECA;&#x540E;&#x5199;&#x5B8C;&#x7A0B;&#x5E8F;&#x4E4B;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;UartDownload.exe&#x4E0B;&#x8F7D;&#x7A0B;&#x5E8F;&#x5373;&#x53EF;&#x3002;  </p>
+<p>&#x5982;&#x679C;&#x5728;2.3&#x6B65;&#x5931;&#x8D25;&#xFF0C;&#x6309;&#x7167;&#x4EE5;&#x4E0B;&#x6B65;&#x9AA4;&#x68C0;&#x67E5;&#xFF1A;<br>&#x9996;&#x5148;&#x68C0;&#x67E5;&#x4E32;&#x53E3;&#x662F;&#x5426;OK&#xFF1B;<br>&#x5982;&#x679C;&#x6CA1;&#x6709;&#x95EE;&#x9898;&#xFF0C;&#x5219;&#x5C06;SD&#x5361;&#x63D2;&#x5165;&#x7535;&#x8111;&#xFF0C;&#x5728;&#x78C1;&#x76D8;&#x7BA1;&#x7406;&#x5668;&#x4E2D;&#x67E5;&#x770B;SD&#x5361;&#x662F;&#x5426;&#x5B58;&#x5728;&#x672A;&#x5206;&#x914D;&#x7A7A;&#x95F4;&#xFF0C;&#x5982;&#x679C;&#x5B58;&#x5728;&#x672A;&#x5206;&#x914D;&#x7A7A;&#x95F4;&#xFF0C;&#x5219;&#x9700;&#x8981;&#x5C06;SD&#x5361;&#x683C;&#x5F0F;&#x5316;&#xFF0C;&#x683C;&#x5F0F;&#x5316;&#x4E4B;&#x540E;&#x518D;&#x6B21;&#x68C0;&#x67E5;&#x662F;&#x5426;&#x5B58;&#x5728;&#x672A;&#x5206;&#x914D;&#x7A7A;&#x95F4;&#xFF0C;&#x5B8C;&#x6210;&#x4E4B;&#x540E;&#x518D;&#x4ECE;&#x7B2C;&#x4E00;&#x6B65;SD&#x5361;&#x70E7;&#x5F55;&#x5F00;&#x59CB;&#x3002;<br><em>UartDownload.exe&#x8F6F;&#x4EF6;&#x9664;&#x4E86;&#x4E0B;&#x8F7D;&#x3001;&#x53D1;&#x9001;&#x5355;&#x5B57;&#x7B26;&#x4E32;&#x548C;&#x4E32;&#x53E3;&#x8BBE;&#x7F6E;&#x5916;&#xFF0C;&#x5176;&#x5B83;&#x529F;&#x80FD;&#x6682;&#x65F6;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;&#xFF0C;&#x540E;&#x9762;&#x6709;&#x5F85;&#x5B8C;&#x5584;&#x3002;</em></p>
 
       
     </div>
